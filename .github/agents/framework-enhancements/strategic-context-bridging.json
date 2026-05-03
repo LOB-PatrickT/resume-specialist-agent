@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "framework": "Strategic Context Bridging",
+    "version": "1.0",
+    "description": "Translate experience between startup/agile and structured corporate environments, with regional/cultural notes."
+  },
+  "bridges": {
+    "startup_to_corporate_ops": {
+      "principle": "Keep the impact; translate the method and controls language",
+      "translation_table": [
+        {"startup_term": "Wore many hats", "corporate_term": "Handled cross-functional responsibilities with clear ownership (RACI)"},
+        {"startup_term": "Moved fast", "corporate_term": "Delivered within defined SLAs with change control (CAB)"},
+        {"startup_term": "Scrappy processes", "corporate_term": "Right-sized processes with documented SOPs and risk controls"},
+        {"startup_term": "Agile squads", "corporate_term": "Cross-functional teams with defined interfaces and governance"}
+      ],
+      "evidence_patterns": [
+        "Defined SOPs and checklists improving consistency (First-Time-Right +X%)",
+        "Introduced KPIs and dashboards for throughput, quality, and risk",
+        "Aligned processes with audit/compliance (e.g., ISO, SoX)"
+      ]
+    },
+    "regional_notes": {
+      "germany_enterprise": {
+        "expectations": [
+          "Clarity of ownership (RACI), process stability, auditability",
+          "Risk management and change control (CAB), works councils (Betriebsrat) awareness where applicable",
+          "Evidence of measurable outcomes within formal structures"
+        ],
+        "do": [
+          "Use controls vocabulary: SOP, SLA, KPI, audit, compliance, risk register",
+          "Show how agile practices were documented and governed"
+        ],
+        "avoid": [
+          "Overemphasis on speed without controls",
+          "Vague claims without metrics or governance"
+        ]
+      }
+    }
+  },
+  "templates": {
+    "summary": "Translated agile startup experience into structured operations by defining SOPs, KPIs, and change controls; improved [metric] by [value] while meeting audit/compliance standards.",
+    "bullet": "Introduced [control/process] raising First-Time-Right from [X]% to [Y]% and reducing rework by [Z]% across [teams]"
+  }
+}
+

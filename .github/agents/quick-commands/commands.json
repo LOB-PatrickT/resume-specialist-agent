@@ -133,6 +133,65 @@
       "guardrails": [
         ".github/agents/governance/change-control.json"
       ]
+    },
+    {
+      "id": "ats-audit",
+      "aliases": ["ats audit", "cv:ats"],
+      "description": "Run ATS readiness checks and suggest fixes.",
+      "guardrails": [
+        ".github/agents/guardrails/ats-readiness.json"
+      ]
+    },
+    {
+      "id": "rewrite-for-audience",
+      "aliases": ["rewrite audience", "cv:rewrite-audience"],
+      "description": "Rewrite the same achievement for Tech Lead, VP Sales, Finance Director.",
+      "inputs": {"required": ["line"], "optional": ["metrics"]},
+      "guardrails": [
+        ".github/agents/framework-enhancements/multi-audience-rewrites.json"
+      ]
+    },
+    {
+      "id": "map-pivot",
+      "aliases": ["pivot mapping", "cv:pivot"],
+      "description": "Map prior-domain skills to target role (e.g., teaching→corporate L&D).",
+      "inputs": {"required": ["source", "target"]},
+      "guardrails": [
+        ".github/agents/framework-enhancements/career-pivot-mapping.json"
+      ]
+    },
+    {
+      "id": "structure-broad-role",
+      "aliases": ["structure role", "cv:structure-broad"],
+      "description": "Group a broad role into 3–5 competency lanes with metrics.",
+      "guardrails": [
+        ".github/agents/framework-enhancements/role-ambiguity-structuring.json"
+      ]
+    },
+    {
+      "id": "compress-skills",
+      "aliases": ["skills compress", "cv:skills-tier"],
+      "description": "Convert skill dump into tiered, evidence-backed competencies.",
+      "guardrails": [
+        ".github/agents/framework-enhancements/skills-structure-guidelines.json"
+      ]
+    },
+    {
+      "id": "transform-tasks-to-achievements",
+      "aliases": ["tasks→achievements", "cv:transform-achievements"],
+      "description": "Convert task statements into quantified achievements.",
+      "guardrails": [
+        ".github/agents/framework-enhancements/task-to-achievement-transform.json"
+      ]
+    },
+    {
+      "id": "target-to-jd",
+      "aliases": ["target jd", "cv:target"],
+      "description": "Align bullets and summary to a specific JD; prune off-target content.",
+      "guardrails": [
+        ".github/agents/framework-enhancements/region-length-targeting.json",
+        ".github/agents/framework-enhancements/gold-standards-checks.json"
+      ]
     }
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "metadata": {"framework": "Gold Standards Checks", "version": "1.0", "description": "Validation rules for maximum professional signal density."},
+  "checks": [
+    {"name": "Achievement-Only Bullets", "rule": "No task-only statements", "fix": "Apply task→achievement transform"},
+    {"name": "Quantification Present", "rule": "Each recent role has metrics", "fix": "Add before→after or absolute numbers"},
+    {"name": "Summary Targeting", "rule": "Executive summary tailored to JD", "fix": "Rewrite summary with JD pain points"},
+    {"name": "Scannability", "rule": "Bullets, white space, clear headers", "fix": "Limit lines to ~220 chars; use action verbs"},
+    {"name": "Action Verbs", "rule": "Each bullet starts with a verb", "fix": "Replace passive phrasing"},
+    {"name": "Global Data Minimization", "rule": "No DOB/photo/address unless required", "fix": "Remove and note GDPR compliance"}
+  ]
+}
+

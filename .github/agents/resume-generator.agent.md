@@ -505,3 +505,10 @@ A successful CV output achieves:
 | 1.0 | 3 May 2026 | Initial release with complete Europass framework, skill cards, guardrails, and context gates |
 | 1.1 | 3 May 2026 | Added Business Impact Quantification Framework, Senior-Level Positioning Framework, CV Quality Scoring System, Actionable Items & Gap Prompts Framework; updated guardrails |
 | 1.2 | 3 May 2026 | Added Profession Overlays (QA/SE), Seniority Classification rubric and output; added Revision History log |
+
+## CV Gap Findings (Storage & Naming Rules)
+- Folder: `.github/agents/cv-gap-findings/`
+- File naming: `analysis_{applicant-name-snake}_{cv|profile}_gaps_{profession-snake}.md`
+  - Example: `analysis_nadine_tolentino_cv_gaps_qa-engineer.md`
+- Purpose: store structured gap analyses and HR feedback reviews
+- Scope: read-only artifacts used for improvement planning; do not include PII beyond name/email if needed

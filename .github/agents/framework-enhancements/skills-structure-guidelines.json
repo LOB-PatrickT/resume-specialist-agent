@@ -1,0 +1,19 @@
+{
+  "metadata": {"framework": "Skills Structure Guidelines", "version": "1.0", "description": "From keyword dump to actionable competencies."},
+  "tiers": {
+    "core": {"cap": 6, "description": "Primary strengths required by the target role"},
+    "advanced": {"cap": 8, "description": "Frequently used, strong proficiency"},
+    "working": {"cap": 8, "description": "Familiar/used occasionally; avoid basics"}
+  },
+  "rules": [
+    "Add level + years + evidence (e.g., Advanced (5 yrs): PHP automation, 250+ cases)",
+    "Merge synonyms; remove trivial tools (e.g., Microsoft Word)",
+    "Prioritize by JD relevance; cap visible items per tier"
+  ],
+  "example": {
+    "core": ["HRIS/Payroll QA (Advanced)", "Mainframe/COBOL Testing (Advanced, 7 yrs)", "Regression Strategy (Expert)"],
+    "advanced": ["PHP Automation (5 yrs)", "HP ALM/TestRail", "SQL for Data Validation"],
+    "working": ["Docker/Kubernetes (basic)", "AWS CLI (basic)"]
+  }
+}
+

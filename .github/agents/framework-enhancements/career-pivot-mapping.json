@@ -1,0 +1,16 @@
+{
+  "metadata": {"framework": "Career Pivot Mapping", "version": "1.0", "description": "Translate prior-domain skills to new-role language with business outcomes."},
+  "teaching_to_corporate_ld": {
+    "mapping": [
+      {"from": "Curriculum Development", "to": "Learning program design & content architecture", "evidence": "Launched role-based learning paths; completion +35%"},
+      {"from": "Classroom Management", "to": "Stakeholder facilitation & session ops", "evidence": "Facilitated cross-functional workshops; CSAT 4.7/5"},
+      {"from": "Assessment & Grading", "to": "Learning analytics & ROI", "evidence": "Level-3 behavior change +22%; retention +9 pts"}
+    ],
+    "summary": "Reframed education expertise as corporate enablement, linking programs to adoption, proficiency, and performance KPIs.",
+    "bullets": [
+      "Designed role-based onboarding lowering time-to-productivity by 28%",
+      "Built analytics to track proficiency; identified gaps and closed them with targeted modules"
+    ]
+  }
+}
+

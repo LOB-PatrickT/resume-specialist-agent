@@ -1,0 +1,18 @@
+{
+  "metadata": {"framework": "ATS Readiness", "version": "1.0", "description": "Prevent ATS parsing failures with structural rules and auto-fixes."},
+  "common_pitfalls": [
+    {"issue": "Tables/text boxes", "risk": "Parsing failure", "fix": "Use plain text with standard headers and bullets"},
+    {"issue": "Graphics/icons-heavy headers", "risk": "Header not parsed", "fix": "Plain-text name, email, phone, location on top line"},
+    {"issue": "Non-standard section titles", "risk": "Sections skipped", "fix": "Use: Summary, Work Experience, Education, Skills, Certifications"}
+  ],
+  "emoji_limit": 4,
+  "export_formats": ["PDF", "DOCX"],
+  "checklist": [
+    "No tables or text boxes",
+    "Standard section titles",
+    "Plain-text header with contact info",
+    "Bulleted lists, not paragraphs",
+    "Avoid images and heavy icons"
+  ]
+}
+
