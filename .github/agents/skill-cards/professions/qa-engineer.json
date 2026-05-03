@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "profession": "QA Engineer",
+    "version": "1.0",
+    "type": "profession-overlay",
+    "description": "Lean, optional overlay to tailor CV extraction and phrasing for QA Engineers without bloating core frameworks.",
+    "depends_on": [
+      "../digital-skills.json",
+      "../organizational-skills.json",
+      "../../framework-enhancements/business-impact-framework.json"
+    ]
+  },
+  "core_domains": [
+    "Test Strategy & Governance",
+    "Manual/Functional & Regression Testing",
+    "Test Automation (frameworks, coverage, stability)",
+    "Performance/Load/Stress Testing",
+    "Security & Compliance (e.g., PCI-DSS, GDPR)",
+    "Data Integrity & SQL Validation",
+    "API Testing & Integration",
+    "Test Management & Release Readiness",
+    "Defect Lifecycle & Root Cause Collaboration"
+  ],
+  "senior_indicators": [
+    "Architected test strategy and standards across teams",
+    "Increased automation coverage and stability (e.g., flaky tests < 2%)",
+    "Reduced defect escape rate and accelerated release cadence",
+    "Owned quality gates and release readiness/rollback criteria",
+    "Mentored QA engineers; improved team throughput/first-pass quality",
+    "Led compliance/audit readiness with zero critical findings",
+    "Introduced data-driven QA metrics (dashboards, trends)"
+  ],
+  "impact_metrics": [
+    "Defect escape rate (before → after)",
+    "Automation coverage (% of regression automated)",
+    "Manual effort saved per release (hours)",
+    "Release frequency (monthly → bi-weekly/weekly)",
+    "MTTR for defects (days → hours)",
+    "Post-release incidents prevented (#, severity)",
+    "Audit results (findings → zero) and compliance maintained",
+    "Test case volume and coverage (%)",
+    "Performance improvements (RPS, p95 latency, throughput)"
+  ],
+  "achievement_templates": [
+    "Designed [tool/language]-based automation framework ([N]+ cases), reducing manual effort from [X]h to [Y]h per cycle; enabled [frequency] releases (↑[K]x)",
+    "Reduced defect escape rate from [X]% to [Y]% by implementing [strategy/process] across [N] modules; prevented [#] critical incidents",
+    "Led PCI-DSS/GDPR testing program across [system]; achieved zero critical findings over [#] audits; maintained [uptime]% SLA",
+    "Introduced data integrity validation suite (SQL) covering [N] data fields; prevented [#] payroll/calculation errors affecting [user_count] users",
+    "Drove flakiness down to [Y]% by stabilizing pipeline tests; improved CI lead time from [X]m to [Y]m; reduced change failure rate to [Z]%"
+  ],
+  "missing_info_prompts": [
+    "How many test cases (total and automated)? Coverage %?",
+    "What was defect escape rate before/after? Over how many releases?",
+    "What release cadence did you support before/after?",
+    "Any compliance frameworks (PCI-DSS/ISO/GDPR) with audit outcomes?",
+    "What user/client/transaction scale did the system handle?",
+    "What was the measurable impact of performance testing (p95 latency, throughput)?"
+  ],
+  "ats_keywords": [
+    "Test Strategy", "Regression Testing", "Automation Framework", "Selenium", "Playwright", "PHP/Python/Java Automation",
+    "HP ALM", "TestRail", "JIRA", "LoadRunner", "Performance Testing", "API Testing", "Postman",
+    "SQL", "Data Integrity", "PCI-DSS", "GDPR", "CI/CD", "Quality Gates"
+  ],
+  "scoring_overrides": {
+    "content_quality_weight": 38,
+    "structure_compliance_weight": 24,
+    "tone_language_weight": 18,
+    "evidence_validation_weight": 12,
+    "completeness_weight": 8,
+    "notes": "Slightly higher emphasis on measurable quality impact and automation outcomes."
+  },
+  "brevity": {
+    "preferred_bullets_recent_role": 3,
+    "max_bullets_recent_role": 6,
+    "rule": "Lead with metric; 1 result per bullet; avoid repeating responsibilities."
+  }
+}
+

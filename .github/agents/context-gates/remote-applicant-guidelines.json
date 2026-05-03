@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "framework": "Remote Applicant Guidelines for Global Workforce",
+    "version": "1.0",
+    "description": "Guidance for processing CVs from remote applicants regardless of current location or citizenship",
+    "context": "Recognizes that remote work has globalized recruitment; agent should not assume EU-local citizenship"
+  },
+  "remote_applicant_definition": {
+    "criteria": "Any applicant applying for remote position from any global location",
+    "current_location": "May be anywhere worldwide",
+    "citizenship": "No assumption of EU citizenship",
+    "application": "Use Europass as universal standard (internationally recognized)"
+  },
+  "location_transparency": {
+    "requirement": "Clearly state current location in CV",
+    "why": "Employers need to understand time zones, visa requirements, and work location preferences",
+    "format": "City, Country in Personal Information and/or Work Experience sections",
+    "examples": [
+      "Based in: Toronto, Canada",
+      "Current location: Bangkok, Thailand",
+      "Remote (EU time zone preferred for collaboration)"
+    ]
+  },
+  "timezone_considerations": {
+    "disclosure_optional": true,
+    "where_to_include": "Additional Information section or Personal Information",
+    "format": "State timezone and any constraints",
+    "examples": [
+      "Time zone: UTC+8; available for overlap with EU hours",
+      "Time zone: UTC-5; flexible for early morning meetings",
+      "Time zone: UTC-8; available Mon-Fri 2PM-10PM PT for PST-based team"
+    ]
+  },
+  "visa_sponsorship": {
+    "disclosure_guidance": "Depends on job requirements",
+    "scenarios": [
+      {
+        "scenario": "Job explicitly states 'EU residents only'",
+        "action": "Disclose visa status in cover letter, not CV"
+      },
+      {
+        "scenario": "Job open to global candidates with sponsorship available",
+        "action": "Can note in 'Additional Information' or cover letter: 'Visa sponsorship eligible'"
+      },
+      {
+        "scenario": "Remote role with no location restriction",
+        "action": "No need to mention visa; CV remains location-neutral"
+      }
+    ]
+  },
+  "work_authorization": {
+    "right_to_work": "EU applicants: natural 'right to work' in EU (mobility of labor)",
+    "non_eu_applicants": {
+      "assumption": "Do NOT assume applicant has work authorization in EU",
+      "disclosure": "If applying for EU-based roles, can note: 'Eligible for digital nomad visa' or 'Holding valid work permit'"
+    }
+  },
+  "relocation_intentions": {
+    "employer_interest": "Employers often want to know relocation willingness",
+    "disclosure_guidance": [
+      {
+        "if_remote": "Not necessary to declare relocation intent for remote roles"
+      },
+      {
+        "if_hybrid": "Can note in 'Additional Information': 'Available to relocate to [City] if opportunity requires'"
+      },
+      {
+        "if_unclear": "Cover letter is better place for relocation discussion than CV"
+      }
+    ]
+  },
+  "international_experience": {
+    "advantage": "Remote applicants often bring cross-cultural perspective",
+    "highlighting_strategy": [
+      "List international work experience prominently",
+      "Note languages spoken (CEFR scale)",
+      "Mention multicultural team collaboration",
+      "Include global client exposure if relevant"
+    ],
+    "example": "Managed distributed team across 5 countries; experienced in async collaboration across time zones"
+  },
+  "language_multilingualism": {
+    "remote_advantage": "Remote roles often value multilingual capabilities",
+    "europass_cefr": "Use CEFR scale (A1-C2) per Europass standards",
+    "format": [
+      "English: C1",
+      "Spanish: B2",
+      "Portuguese: B1",
+      "French: A2"
+    ],
+    "ordering": "Typically list by proficiency level (highest first) or by job relevance"
+  },
+  "communication_tools_proficiency": {
+    "expectation": "Remote roles require digital communication competency",
+    "placement": "Under Digital Skills (Communication category)",
+    "tools_to_highlight": [
+      "Asynchronous communication (email, Slack, Teams)",
+      "Synchronous communication (Zoom, Google Meet, Microsoft Teams)",
+      "Documentation tools (Confluence, Notion, GitHub Wiki)",
+      "Collaboration platforms (Miro, Figma, Google Workspace)",
+      "Project management (Asana, Monday.com, Jira)",
+      "Version control / code collaboration (Git, GitHub)"
+    ]
+  },
+  "employment_history_interpretation": {
+    "contract_types": [
+      {
+        "type": "Multiple short-term contracts",
+        "interpretation": "Common in remote/freelance economy; not a red flag",
+        "context": "Freelancers, contractors, or project-based workers"
+      },
+      {
+        "type": "Gaps between contracts",
+        "interpretation": "Less concerning if explicit reason provided (upskilling, visa processing, etc.)",
+        "gap_explanation": "Include in 'Additional Information' if >3 months"
+      },
+      {
+        "type": "Frequent role transitions",
+        "interpretation": "Can indicate career growth or remote opportunity-seeking",
+        "context": "Provide narrative through CV structure"
+      }
+    ]
+  },
+  "remote_work_evidence": {
+    "how_to_demonstrate": "Remote applicants should show history of remote work capability",
+    "evidence_inclusion": [
+      "Previous remote positions (clearly marked)",
+      "Freelance/contract work (demonstrates autonomous delivery)",
+      "Online education or certifications (shows self-directed learning)",
+      "Distributed team experience (shows async collaboration)",
+      "Timezone spanning projects (shows flexibility)"
+    ],
+    "example_role_description": "Led cross-timezone development team (distributed across PST, GMT, IST); managed async standups and documentation-first development approach"
+  },
+  "remote_role_matching": {
+    "cv_alignment": "Structure CV to emphasize remote-relevant skills",
+    "key_qualities": [
+      "Self-motivation and autonomy",
+      "Written communication excellence",
+      "Time zone flexibility",
+      "Technical proficiency with remote tools",
+      "Async problem-solving",
+      "Documentation discipline"
+    ],
+    "integration": "Extract these from work experience using CAR model"
+  },
+  "employer_perspective": {
+    "what_employers_assess": [
+      {
+        "criterion": "Timezone compatibility",
+        "cv_reference": "Current location and timezone in Personal Information"
+      },
+      {
+        "criterion": "Remote work maturity",
+        "cv_reference": "Previous remote roles, freelance experience, online education"
+      },
+      {
+        "criterion": "Communication skill",
+        "cv_reference": "Language proficiency, documentation examples, written communication evidence"
+      },
+      {
+        "criterion": "Reliability across borders",
+        "cv_reference": "International experience, long-term contracts, on-time delivery metrics"
+      }
+    ]
+  },
+  "regional_preferences": {
+    "guidance": "This agent uses Europass as universal standard; no region-specific favoritism",
+    "note": "Europass is recognized in 70+ countries worldwide and accepted by international recruiters"
+  },
+  "data_privacy_for_remote_applicants": {
+    "gdpr_applicability": "GDPR applies if data is processed by EU-based employer",
+    "international_applicant": "CV may still be processed under GDPR if employer is EU-based",
+    "data_minimization": "Same rules apply regardless of applicant location"
+  },
+  "validation_checks_for_remote": {
+    "check_1": {
+      "name": "Location Transparency",
+      "rule": "CV clearly states current location or 'Remote'",
+      "flag_if_missing": true
+    },
+    "check_2": {
+      "name": "Timezone Disclosure (Optional)",
+      "rule": "If timezone relevant, clearly stated",
+      "flag_if_missing": false
+    },
+    "check_3": {
+      "name": "Remote Experience Evidence",
+      "rule": "For remote roles, highlight prior remote work or distributed team experience",
+      "flag_if_missing": false
+    },
+    "check_4": {
+      "name": "Communication Proficiency",
+      "rule": "Digital skills and languages clearly listed",
+      "flag_if_missing": false
+    },
+    "check_5": {
+      "name": "Employment Continuity Explanation",
+      "rule": "If gaps or frequent changes, provide context",
+      "flag_if_missing": true
+    }
+  },
+  "best_practices_for_remote_applicants": [
+    "Clearly state current location and timezone",
+    "Highlight remote work experience or distributed team collaboration",
+    "Emphasize written communication and documentation skills",
+    "List relevant digital tools and platforms",
+    "Note language proficiencies with CEFR levels",
+    "If gap exists, briefly explain (relocations, visa processing, upskilling)",
+    "Use Europass structure (international recognition)",
+    "Provide realistic availability/flexibility expectations"
+  ]
+}
+

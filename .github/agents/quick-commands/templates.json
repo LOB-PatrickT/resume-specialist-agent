@@ -1,0 +1,12 @@
+{
+  "linkedin_post": {
+    "impact_first": "Hi everyone! I’m exploring new opportunities and would appreciate referrals or connections. #OpenToWork\n\n🎯 Target roles: {{roles}}\n📍 Location: {{location}}\n\nWhat I bring:\n{{#each highlights}}- {{this}}\n{{/each}}\n\nPrev: {{employers}}\n{{#if contact}}Contact: {{contact}}\n{{/if}}{{#if hashtags}}{{hashtags}}{{/if}}",
+    "industry_focus": "Hello network—open to senior roles. #OpenToWork\n\n🎯 {{roles}} | 📍 {{location}}\n\nIndustry experience:\n{{#each industries}}- {{this}}\n{{/each}}\n\nImpact:\n{{#each highlights}}- {{this}}\n{{/each}}\n\nPrev: {{employers}}\n{{#if contact}}Contact: {{contact}}\n{{/if}}{{#if hashtags}}{{hashtags}}{{/if}}",
+    "recruiter_friendly":"I’m seeking {{roles}} in {{location}}. #OpenToWork\n\nOutcomes:\n{{#each highlights}}- {{this}}\n{{/each}}\n\nSectors: {{industries}}\nPrev: {{employers}}\n{{#if contact}}Contact: {{contact}}\n{{/if}}{{#if hashtags}}{{hashtags}}{{/if}}"
+  },
+  "professional_summary": {
+    "standard": "{{seniority_level}} professional with {{total_years}} years across {{core_domains}} in {{industries}}. Delivered outcomes such as {{key_impacts}}. Credentials include {{certifications}}. Recognized for objective, evidence-based delivery and collaboration across cross-functional teams.",
+    "short": "{{seniority_level}} QA professional ({{total_years}} yrs) across {{industries}}; strengths in {{core_domains}} with outcomes like {{key_impacts}}."
+  }
+}
+

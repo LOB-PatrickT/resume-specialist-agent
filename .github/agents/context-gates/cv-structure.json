@@ -1,0 +1,316 @@
+{
+  "metadata": {
+    "framework": "Europass CV Structure Template",
+    "version": "1.0",
+    "description": "Standardized structural hierarchy for generating compliant European CVs",
+    "europass_compliant": true
+  },
+  "section_hierarchy": [
+    {
+      "section_number": 1,
+      "section_name": "Personal Information",
+      "display_header": true,
+      "max_lines": 5,
+      "required_fields": [
+        {
+          "field": "Name",
+          "format": "FirstName LastName",
+          "example": "Maria García Rodríguez"
+        },
+        {
+          "field": "Contact Email",
+          "format": "professional@domain.com",
+          "example": "maria.garcia@example.com"
+        }
+      ],
+      "optional_fields": [
+        {
+          "field": "Phone",
+          "format": "International format",
+          "example": "+34 612 345 678"
+        },
+        {
+          "field": "Location",
+          "format": "City, Country",
+          "example": "Madrid, Spain"
+        },
+        {
+          "field": "LinkedIn/Website",
+          "format": "Professional URL",
+          "example": "linkedin.com/in/maria-garcia"
+        }
+      ],
+      "prohibited_fields": [
+        "Home address",
+        "Date of birth",
+        "Age",
+        "Photograph",
+        "Marital status",
+        "Social media (non-professional)"
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Professional Profile / Professional Summary",
+      "display_header": true,
+      "max_lines": 4,
+      "requirement": "Optional but recommended",
+      "guidelines": [
+        "Maximum 3-4 sentences",
+        "Factual and objective",
+        "Highlight key professional strengths with evidence",
+        "No first-person pronouns",
+        "No marketing language or buzzwords"
+      ],
+      "example_good": "Software engineer with 12 years' experience in enterprise Java development and cloud infrastructure. Proven expertise in designing and deploying microservices architectures on AWS. Led technical teams of 8+ engineers; delivered 15+ projects on schedule and within budget.",
+      "example_bad": "Passionate and dynamic software developer with a passion for innovation. Experienced in many technologies and always eager to learn. Team player who loves solving complex problems."
+    },
+    {
+      "section_number": 3,
+      "section_name": "Work Experience",
+      "display_header": true,
+      "max_entries": "All relevant (consolidate if >10 years old)",
+      "ordering": "Reverse chronological (newest first)",
+      "entry_structure": [
+        {
+          "field": "Date range",
+          "format": "DD/MM/YYYY - DD/MM/YYYY or Month YYYY - Present",
+          "example": "1 January 2022 - Present"
+        },
+        {
+          "field": "Job title",
+          "format": "Official job title from employment record",
+          "example": "Senior Product Manager"
+        },
+        {
+          "field": "Employer name",
+          "format": "Full legal organization name",
+          "example": "TechCorp Solutions GmbH"
+        },
+        {
+          "field": "Location",
+          "format": "City, Country or Remote",
+          "example": "Berlin, Germany"
+        },
+        {
+          "field": "Main duties",
+          "format": "2-4 bullet points with action verbs",
+          "example": [
+            "Managed product roadmap for SaaS platform serving 5000+ users",
+            "Led cross-functional team of 6 (engineering, design, marketing)",
+            "Increased feature adoption from 42% to 78% through UX optimization"
+          ]
+        }
+      ],
+      "consolidation_rule": "If >10 years of history, group older roles into single 'Previous Experience' line"
+    },
+    {
+      "section_number": 4,
+      "section_name": "Education & Training",
+      "display_header": true,
+      "max_entries": "All relevant degrees and relevant postgraduate training",
+      "ordering": "Reverse chronological",
+      "entry_structure": [
+        {
+          "field": "Date",
+          "format": "YYYY or DD/MM/YYYY (completion date)",
+          "example": "2019"
+        },
+        {
+          "field": "Qualification / Degree",
+          "format": "Formal degree name",
+          "example": "Master of Science in Computer Science"
+        },
+        {
+          "field": "Principal subjects (optional)",
+          "format": "Main study areas if relevant",
+          "example": "Distributed systems, Machine learning, Cloud architecture"
+        },
+        {
+          "field": "Institution",
+          "format": "Full university/school name",
+          "example": "Technical University of Munich"
+        },
+        {
+          "field": "Location",
+          "format": "City, Country",
+          "example": "Munich, Germany"
+        }
+      ],
+      "secondary_training": "Include relevant postgraduate training or MOOCs (only if recent or industry-critical)"
+    },
+    {
+      "section_number": 5,
+      "section_name": "Language Skills",
+      "display_header": true,
+      "format": "CEFR scale mandatory (A1-C2)",
+      "entry_structure": [
+        {
+          "field": "Language name",
+          "format": "Full language name",
+          "example": "English"
+        },
+        {
+          "field": "CEFR level",
+          "format": "Single letter from A1/A2/B1/B2/C1/C2",
+          "example": "C1"
+        },
+        {
+          "field": "Certification (optional)",
+          "format": "If certified",
+          "example": "Cambridge Certificate of Proficiency (CPE), 2018"
+        }
+      ],
+      "granular_option": "Can optionally break down by competency (listening, reading, writing, etc.)",
+      "ordering": "By proficiency level (highest first) or alphabetically"
+    },
+    {
+      "section_number": 6,
+      "section_name": "Digital & Technical Skills",
+      "display_header": true,
+      "format": "Organized by category (Information Processing, Content Creation, etc.)",
+      "entry_structure": [
+        {
+          "field": "Skill category",
+          "format": "From digital skills framework",
+          "example": "Cloud Platforms"
+        },
+        {
+          "field": "Specific skills",
+          "format": "List with proficiency or years",
+          "example": "AWS (Advanced, 8 years); Azure (Intermediate, 3 years)"
+        }
+      ],
+      "note": "Include certifications where applicable"
+    },
+    {
+      "section_number": 7,
+      "section_name": "Interpersonal & Organizational Skills",
+      "display_header": true,
+      "requirement": "Recommended for management or client-facing roles",
+      "format": "Evidence-based (not self-assessed)",
+      "entry_structure": [
+        {
+          "field": "Skill name",
+          "format": "From interpersonal/organizational frameworks",
+          "example": "Leadership"
+        },
+        {
+          "field": "Evidence statement",
+          "format": "CAR model (Context-Action-Result)",
+          "example": "Led team of 8 through organizational restructure; maintained 95% retention rate"
+        }
+      ]
+    },
+    {
+      "section_number": 8,
+      "section_name": "Certifications & Accreditations",
+      "display_header": false,
+      "requirement": "Optional; can be included in relevant section or as separate section",
+      "entry_structure": [
+        {
+          "field": "Certification name",
+          "format": "Full official name",
+          "example": "AWS Certified Solutions Architect (Professional)"
+        },
+        {
+          "field": "Issuer",
+          "format": "Awarding organization",
+          "example": "Amazon Web Services"
+        },
+        {
+          "field": "Date obtained",
+          "format": "DD/MM/YYYY or YYYY",
+          "example": "05/09/2023"
+        },
+        {
+          "field": "Expiration (if applicable)",
+          "format": "DD/MM/YYYY or YYYY",
+          "example": "05/09/2026"
+        }
+      ]
+    },
+    {
+      "section_number": 9,
+      "section_name": "Publications & Projects",
+      "display_header": false,
+      "requirement": "Optional; only if highly relevant (academic, technical authorship)",
+      "entry_structure": [
+        {
+          "field": "Title",
+          "format": "Full publication/project title",
+          "example": "Microservices Architecture Patterns in Kubernetes (Blog series)"
+        },
+        {
+          "field": "Date",
+          "format": "DD/MM/YYYY or Month Year",
+          "example": "March 2024"
+        },
+        {
+          "field": "Publisher/Platform",
+          "format": "Where published",
+          "example": "IEEE Software Magazine"
+        }
+      ]
+    },
+    {
+      "section_number": 10,
+      "section_name": "Additional Information",
+      "display_header": false,
+      "requirement": "Optional; use for career gaps, special qualifications, or driving licence",
+      "examples": [
+        "Career break June 2021 - Dec 2021: Career development and relocation",
+        "Driving licence: Category B (EU standard)",
+        "Volunteer experience: Tech trainer at CodeWithUs non-profit"
+      ]
+    }
+  ],
+  "visual_layout_recommendations": {
+    "template_style": "Choose either Classic Europass or Modernized",
+    "classic_europass": {
+      "description": "Official Europass format",
+      "url": "https://europass.cedefop.europa.eu/"
+    },
+    "modernized_alternative": {
+      "description": "Professional template maintaining Europass compliance",
+      "url": "https://www.novoresume.com/"
+    },
+    "typography": {
+      "font": "Sans-serif (Arial, Calibri, Helvetica)",
+      "size": "10-12pt",
+      "spacing": "1.15 - 1.5 line height"
+    }
+  },
+  "length_enforcement": {
+    "soft_limit": "1 page",
+    "hard_limit": "2 pages maximum",
+    "exceedance_handling": "Auto-reject with consolidation suggestions"
+  },
+  "senior_role_structure": {
+    "applicability": "Senior titles or >=7 years total experience",
+    "work_experience": {
+      "prelude_scope_line": {
+        "required": true,
+        "format": "Scope: [platform/system], [users/clients], [transactions], [criticality]",
+        "example": "Scope: Enterprise HRIS/Payroll platform serving 500+ clients; 200K+ end-users; $2.5B+ annual transactions"
+      },
+      "bullet_label": "Strategic Achievements",
+      "bullet_rules": [
+        "Lead with metric where possible (before → after)",
+        "Include scale context at least once",
+        "Favor impact over activity; one result per bullet"
+      ]
+    }
+  },
+  "anti_bloat_controls": {
+    "preferred_bullets_per_recent_role": 3,
+    "max_bullets_per_recent_role": 6,
+    "max_bullets_per_older_role": 2,
+    "consolidate_roles_older_than_years": 10
+  },
+  "links": {
+    "business_impact_framework": ".github/agents/framework-enhancements/business-impact-framework.json",
+    "senior_level_positioning": ".github/agents/framework-enhancements/senior-level-positioning.json",
+    "actionable_items_framework": ".github/agents/framework-enhancements/actionable-items-framework.json"
+  }
+}

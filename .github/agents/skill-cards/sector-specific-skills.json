@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "framework": "Sector-Specific & Technical Skills",
+    "version": "1.0",
+    "description": "Industry-specific competencies and technical expertise organized by sector",
+    "europass_compliant": true,
+    "note": "Skills should include evidence of application and years of experience"
+  },
+  "sectors": {
+    "it_technology": {
+      "description": "Information Technology and Software Development",
+      "skill_categories": [
+        "Programming Languages",
+        "Frameworks & Libraries",
+        "Databases",
+        "Cloud Platforms",
+        "DevOps & Infrastructure",
+        "Quality Assurance",
+        "Networking & Security",
+        "AI/ML"
+      ],
+      "example_skills": [
+        {"name": "Java", "category": "Programming Languages"},
+        {"name": "Python", "category": "Programming Languages"},
+        {"name": "AWS", "category": "Cloud Platforms"},
+        {"name": "Docker", "category": "DevOps & Infrastructure"},
+        {"name": "PostgreSQL", "category": "Databases"},
+        {"name": "Kubernetes", "category": "DevOps & Infrastructure"},
+        {"name": "TensorFlow", "category": "AI/ML"}
+      ]
+    },
+    "business_finance": {
+      "description": "Business, Finance, and Accounting",
+      "skill_categories": [
+        "Financial Analysis",
+        "Accounting Standards",
+        "Business Strategy",
+        "Risk Management",
+        "Compliance",
+        "ERP Systems",
+        "Financial Modeling"
+      ],
+      "example_skills": [
+        {"name": "IFRS", "category": "Accounting Standards"},
+        {"name": "SAP", "category": "ERP Systems"},
+        {"name": "Financial Forecasting", "category": "Financial Analysis"},
+        {"name": "GDPR Compliance", "category": "Compliance"}
+      ]
+    },
+    "healthcare": {
+      "description": "Healthcare and Medical Services",
+      "skill_categories": [
+        "Clinical Expertise",
+        "Medical Technology",
+        "Patient Care",
+        "Regulatory Compliance",
+        "Electronic Health Records",
+        "Medical Coding"
+      ],
+      "example_skills": [
+        {"name": "ICD-10 Coding", "category": "Medical Coding"},
+        {"name": "EMR Systems", "category": "Electronic Health Records"},
+        {"name": "HIPAA Compliance", "category": "Regulatory Compliance"}
+      ]
+    },
+    "marketing_sales": {
+      "description": "Marketing, Sales, and Business Development",
+      "skill_categories": [
+        "Digital Marketing",
+        "Social Media Strategy",
+        "Analytics & Metrics",
+        "Sales Strategy",
+        "Brand Management",
+        "Content Strategy",
+        "CRM Platforms"
+      ],
+      "example_skills": [
+        {"name": "SEO/SEM", "category": "Digital Marketing"},
+        {"name": "Google Analytics", "category": "Analytics & Metrics"},
+        {"name": "Salesforce CRM", "category": "CRM Platforms"},
+        {"name": "Content Marketing", "category": "Content Strategy"}
+      ]
+    },
+    "engineering": {
+      "description": "Engineering and Manufacturing",
+      "skill_categories": [
+        "CAD Design",
+        "Engineering Analysis",
+        "Project Management",
+        "Manufacturing Processes",
+        "Quality Control",
+        "Compliance Standards",
+        "Materials Science"
+      ],
+      "example_skills": [
+        {"name": "AutoCAD", "category": "CAD Design"},
+        {"name": "CATIA", "category": "CAD Design"},
+        {"name": "Lean Manufacturing", "category": "Manufacturing Processes"},
+        {"name": "ISO 9001", "category": "Compliance Standards"}
+      ]
+    },
+    "education": {
+      "description": "Education and Training",
+      "skill_categories": [
+        "Subject Matter Expertise",
+        "Curriculum Design",
+        "Educational Technology",
+        "Assessment Methods",
+        "Student Support",
+        "Training Delivery"
+      ],
+      "example_skills": [
+        {"name": "Curriculum Development", "category": "Curriculum Design"},
+        {"name": "Learning Management Systems (LMS)", "category": "Educational Technology"},
+        {"name": "Instructional Design", "category": "Curriculum Design"}
+      ]
+    }
+  },
+  "data_structure": {
+    "type": "object",
+    "properties": {
+      "skill_name": {
+        "type": "string",
+        "description": "Technical or sector-specific skill name"
+      },
+      "sector": {
+        "type": "string",
+        "description": "Industry or domain"
+      },
+      "category": {
+        "type": "string",
+        "description": "Skill sub-category within sector"
+      },
+      "proficiency_level": {
+        "type": "string",
+        "enum": ["Basic", "Intermediate", "Advanced", "Expert"],
+        "description": "Proficiency based on demonstrated use"
+      },
+      "years_of_experience": {
+        "type": "number",
+        "description": "Total years of hands-on use"
+      },
+      "certifications": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {"type": "string"},
+            "issuer": {"type": "string"},
+            "date_obtained": {"type": "string", "pattern": "^\\d{2}/\\d{2}/\\d{4}$"},
+            "expiration_date": {"type": "string", "pattern": "^\\d{2}/\\d{2}/\\d{4}$"}
+          }
+        }
+      },
+      "projects_or_applications": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "project_name": {"type": "string"},
+            "duration": {"type": "string"},
+            "role": {"type": "string"},
+            "key_achievement": {"type": "string"}
+          }
+        },
+        "description": "Concrete examples of skill application"
+      }
+    }
+  },
+  "validation_rules": {
+    "rule_1": "Each technical skill must have at least one supporting project or certification",
+    "rule_2": "Proficiency levels must be validated against years of experience",
+    "rule_3": "Tool names should use official product naming conventions",
+    "rule_4": "Soft skills (e.g., 'problem-solving') should be extracted to organizational/interpersonal categories instead"
+  }
+}
+

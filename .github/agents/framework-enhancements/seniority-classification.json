@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "framework": "Seniority Classification Rubric",
+    "version": "1.0",
+    "description": "Global baseline to infer Junior / Mid / Senior levels from CV evidence. Works across professions with optional overlays for QA/Software Engineers.",
+    "notes": [
+      "This is a heuristic baseline; companies may vary.",
+      "Classification is evidence-based: scope, impact, complexity, autonomy, leadership.",
+      "Years of experience alone is insufficient but used as a prior."
+    ]
+  },
+  "global_rubric": {
+    "dimensions": [
+      {
+        "name": "Experience Years (prior)",
+        "weights": {"junior": 0.2, "mid": 0.2, "senior": 0.2},
+        "bands": {
+          "junior": "0-2",
+          "mid": "2-6",
+          "senior": "6+"
+        },
+        "note": "Use as a weak prior; do not overrule stronger evidence."
+      },
+      {
+        "name": "Scope & Complexity",
+        "weights": {"junior": 0.25, "mid": 0.30, "senior": 0.35},
+        "signals": {
+          "junior": ["Component-level tasks", "Guided deliverables", "Limited blast radius"],
+          "mid": ["Feature or service ownership", "Cross-module work", "Non-trivial complexity"],
+          "senior": ["Platform/system ownership", "High-scale/critical systems", "Ambiguity handling"]
+        }
+      },
+      {
+        "name": "Impact & Outcomes",
+        "weights": {"junior": 0.20, "mid": 0.25, "senior": 0.30},
+        "signals": {
+          "junior": ["Task completion", "Unit metrics (test added, bug fixed)"],
+          "mid": ["Feature outcomes (perf ↑, defects ↓)", "Team-level improvements"],
+          "senior": ["Business outcomes (revenue/cost/risk)", "Org-level improvements", "Strategy enablement"]
+        }
+      },
+      {
+        "name": "Autonomy & Decision-Making",
+        "weights": {"junior": 0.20, "mid": 0.25, "senior": 0.30},
+        "signals": {
+          "junior": ["Works from specs", "Supervised"],
+          "mid": ["Chooses approaches", "Leads features", "Light guidance"],
+          "senior": ["Architects strategies/processes", "Sets standards", "Leads under ambiguity"]
+        }
+      },
+      {
+        "name": "Leadership & Mentorship",
+        "weights": {"junior": 0.15, "mid": 0.20, "senior": 0.25},
+        "signals": {
+          "junior": ["Self-development"],
+          "mid": ["Mentors 1–2 peers", "Leads small initiatives"],
+          "senior": ["Mentors several engineers", "Leads teams/processes", "Creates org-wide standards"]
+        }
+      }
+    ],
+    "scoring_method": {
+      "aggregation": "Weighted average across dimensions",
+      "output": "probabilities per level + top rationale bullets",
+      "thresholds": {
+        "senior": ">=0.66",
+        "mid": ">=0.66",
+        "junior": "otherwise"
+      }
+    }
+  },
+  "profession_overlays": {
+    "qa_engineer": {
+      "boost_signals": [
+        "Defect escape rate reduction with data",
+        "Automation coverage & stability improvements",
+        "Release cadence acceleration",
+        "Compliance/audit outcomes (zero critical findings)",
+        "Scale context: users/transactions/modules"
+      ]
+    },
+    "software_engineer": {
+      "boost_signals": [
+        "Architecture/SLO ownership",
+        "Latency/throughput/error-rate improvements at scale",
+        "DORA metrics improvements",
+        "Cost/perf optimization with trade-offs",
+        "Observability/MTTR improvements"
+      ]
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "predicted_level": {"type": "string", "enum": ["Junior", "Mid", "Senior"]},
+      "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+      "evidence": {"type": "array", "items": {"type": "string"}},
+      "contradictions": {"type": "array", "items": {"type": "string"}},
+      "recommendations": {"type": "array", "items": {"type": "string"}}
+    }
+  },
+  "exposure": {
+    "where_in_pipeline": "After transformation, before scoring/export (or on raw CV to guide prompts)",
+    "ui_text": "Seniority Assessment (Heuristic): This is a global baseline and may differ by company. Use as guidance, not as a hard label.",
+    "actions": [
+      "If predicted Senior < 0.66 but years >= 7: generate Actionable Items to strengthen strategic/impact evidence",
+      "If predicted Junior but years > 2: prompt for feature ownership and outcomes",
+      "Always display rationale bullets and missing info prompts"
+    ]
+  }
+}
+

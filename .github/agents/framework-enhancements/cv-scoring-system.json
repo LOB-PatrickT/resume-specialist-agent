@@ -1,0 +1,346 @@
+{
+  "metadata": {
+    "framework": "CV Quality Scoring System",
+    "version": "2.0",
+    "description": "Comprehensive scoring rubric for evaluating Europass-compliant CVs",
+    "purpose": "Grade CV quality, identify gaps, provide benchmark feedback, track improvement",
+    "introduced_due_to": "Need for objective CV quality assessment and continuous improvement metrics",
+    "scale": "0-100 (Percentage)",
+    "scoring_frequency": "Automatic on every generated CV"
+  },
+  "scoring_dimensions": {
+    "content_quality": {
+      "weight": 35,
+      "max_points": 35,
+      "description": "Quality and impact of achievements and experience descriptions",
+      "criteria": [
+        {
+          "criterion": "Achievement Quantification",
+          "max_points": 10,
+          "description": "All achievements include measurable metrics and business impact",
+          "scoring_rules": {
+            "90_100": "All work experience achievements include specific metrics (numbers, percentages, time saved, cost reduction, users impacted, etc.); business impact connected to outcomes",
+            "75_89": "80%+ of achievements quantified; most have business impact context; minor gaps in senior-level positions",
+            "60_74": "50-79% of achievements quantified; some business impact; many responsibilities lack metrics",
+            "40_59": "25-49% of achievements quantified; minimal business impact; mostly responsibility-focused",
+            "0_39": "Fewer than 25% quantified; no business impact context; purely responsibility-based"
+          }
+        },
+        {
+          "criterion": "Senior-Level Positioning",
+          "max_points": 10,
+          "description": "For roles with 6+ years experience, clear demonstration of increasing responsibility and leadership",
+          "scoring_rules": {
+            "90_100": "Clear career progression narrative; strategic decision-making evident; mentorship/team leadership demonstrated; scope of work increases with tenure; strategic impact clear",
+            "75_89": "Good progression narrative; some strategic decisions shown; limited mentorship mention; generally increasing scope",
+            "60_74": "Progression visible but not prominent; minimal strategic positioning; lacks seniority signals in achievement framing",
+            "40_59": "Progression unclear; mostly IC (individual contributor) framing; no strategic positioning",
+            "0_39": "No career progression narrative; all positions presented as equivalent; no seniority indicators"
+          }
+        },
+        {
+          "criterion": "Business Impact Context",
+          "max_points": 8,
+          "description": "Achievement statements include scale context and business relevance (not just technical details)",
+          "scoring_rules": {
+            "90_100": "Achievements frame impact in business terms (revenue, cost, customers, compliance, efficiency); scale context included (system size, user base, transaction volume)",
+            "75_89": "Most achievements have business context; scale mentioned in 70%+ of roles; some purely technical language",
+            "60_74": "Mixed business vs. technical framing; scale mentioned in <70%; mostly technical perspective",
+            "40_59": "Primarily technical perspective; minimal business context; scale rarely mentioned",
+            "0_39": "Pure technical description; no business context; no scale context"
+          }
+        },
+        {
+          "criterion": "Evidence Density",
+          "max_points": 7,
+          "description": "Every claim is supported by evidence; no unsubstantiated assertions",
+          "scoring_rules": {
+            "90_100": "All skills have supporting evidence (projects, certifications, years of use); all achievements traceable to role context",
+            "75_89": "90%+ of skills have evidence; most claims supported; minimal gaps",
+            "60_74": "70-89% of skills evidenced; some claims lack support",
+            "40_59": "50-69% of skills evidenced; many unsubstantiated claims",
+            "0_39": "Fewer than 50% evidenced; many unsupported assertions"
+          }
+        }
+      ]
+    },
+    "structure_compliance": {
+      "weight": 25,
+      "max_points": 25,
+      "description": "Adherence to Europass format and structural requirements",
+      "criteria": [
+        {
+          "criterion": "Reverse Chronological Order",
+          "max_points": 7,
+          "description": "Work experience, education, certifications ordered newest to oldest",
+          "scoring_rules": {
+            "100": "All sections perfectly ordered (newest first)",
+            "75": "Work experience ordered; education/certs have 1-2 minor inconsistencies",
+            "50": "Major work experience role out of order; dates inconsistent",
+            "25": "Multiple sections out of order",
+            "0": "Chronological order violated throughout"
+          }
+        },
+        {
+          "criterion": "Section Completeness",
+          "max_points": 8,
+          "description": "All required sections present with appropriate content",
+          "scoring_rules": {
+            "100": "All 10 sections present and complete: Personal Info, Profile, Work, Education, Languages, Skills, Certifications, Publications (if relevant), Additional Info",
+            "85": "9/10 sections present; minor gaps",
+            "70": "8/10 sections present; missing 1 important section",
+            "50": "7/10 sections present; 2 important sections missing",
+            "0": "Fewer than 7 sections or critical missing information"
+          }
+        },
+        {
+          "criterion": "Format Standards Compliance",
+          "max_points": 10,
+          "description": "Dates in DD/MM/YYYY format; no first-person pronouns; consistent layout",
+          "scoring_rules": {
+            "100": "All dates in DD/MM/YYYY or 'Month YYYY'; zero first-person pronouns; consistent formatting throughout",
+            "80": "90%+ dates correct format; 1-2 sentences with first-person; minor layout inconsistencies",
+            "60": "70-89% dates correct; 3-5 first-person instances; several layout issues",
+            "40": "50-69% dates correct; multiple first-person uses; poor layout",
+            "0": "Dates in wrong format; first-person throughout; inconsistent layout"
+          }
+        }
+      ]
+    },
+    "tone_language": {
+      "weight": 20,
+      "max_points": 20,
+      "description": "Professional, objective tone; no buzzwords or marketing language",
+      "criteria": [
+        {
+          "criterion": "Buzzword Removal",
+          "max_points": 10,
+          "description": "No Americanized buzzwords or unsubstantiated self-praise",
+          "scoring_rules": {
+            "100": "Zero buzzwords (rockstar, ninja, guru, passionate, dynamic, go-getter, results-driven, etc.)",
+            "90": "1 minor buzzword detected and appropriately contextualized",
+            "70": "2-3 buzzwords or weak language; partially addressed",
+            "40": "4-5 buzzwords; not professionally framed",
+            "0": "6+ buzzwords; heavy marketing language; unprofessional tone"
+          }
+        },
+        {
+          "criterion": "Objective vs. Subjective Balance",
+          "max_points": 10,
+          "description": "Facts-based claims; no unsubstantiated personality traits or subjective assessments",
+          "scoring_rules": {
+            "100": "100% objective; all claims fact-based; zero subjective personality descriptors",
+            "85": "95-99% objective; 1-2 minor subjective terms well-supported",
+            "70": "90-94% objective; some subjective language present but minimal",
+            "50": "80-89% objective; multiple subjective claims; mixed tone",
+            "0": "Majority subjective; heavy personality-focused language; opinion-based"
+          }
+        }
+      ]
+    },
+    "evidence_validation": {
+      "weight": 12,
+      "max_points": 12,
+      "description": "All claims validated; proficiency aligned with experience; no hallucination",
+      "criteria": [
+        {
+          "criterion": "Proficiency vs. Experience Alignment",
+          "max_points": 6,
+          "description": "Claimed skill proficiency matches years of experience and role evidence",
+          "scoring_rules": {
+            "100": "All skills proficiency levels justified by experience duration and role context",
+            "80": "90%+ of skills appropriately proficiency-leveled; 1-2 minor inconsistencies",
+            "60": "70-89% aligned; several over/under-claims",
+            "40": "50-69% aligned; many misaligned proficiency claims",
+            "0": "Significant proficiency-experience misalignment throughout"
+          }
+        },
+        {
+          "criterion": "Certification Validity",
+          "max_points": 6,
+          "description": "Certifications are current, recognized, and properly dated",
+          "scoring_rules": {
+            "100": "All certifications from recognized bodies; current or recently expired only; dates accurate; expiration tracked",
+            "85": "95%+ valid; 1 minor issue (old cert without note, or date format inconsistency)",
+            "70": "Mostly valid; 1-2 non-standard certifications; some date issues",
+            "50": "70%+ valid; 2-3 questionable certifications; date inconsistencies",
+            "0": "Multiple unrecognized certifications; outdated credentials; missing dates"
+          }
+        }
+      ]
+    },
+    "completeness": {
+      "weight": 8,
+      "max_points": 8,
+      "description": "No missing critical information; comprehensive coverage without fluff",
+      "criteria": [
+        {
+          "criterion": "Information Coverage",
+          "max_points": 8,
+          "description": "All relevant experience, education, and skills captured without redundancy",
+          "scoring_rules": {
+            "100": "All career history >6 months included; all degrees/certs listed; comprehensive skill inventory; no gaps >3 months unexplained",
+            "85": "95%+ of career history; may consolidate roles >10 years; all major certs; 1 minor gap",
+            "70": "90%+ coverage; some old experience consolidated; minor omissions",
+            "50": "80-89% coverage; some experience missing; gaps not explained",
+            "0": "<80% coverage; significant career history missing; unexplained gaps"
+          }
+        }
+      ]
+    }
+  },
+  "overall_score_calculation": {
+    "formula": "(Content_Quality × 0.35) + (Structure_Compliance × 0.25) + (Tone_Language × 0.20) + (Evidence_Validation × 0.12) + (Completeness × 0.08)",
+    "scale": [
+      {
+        "range": "90-100",
+        "rating": "⭐ EXCELLENT",
+        "status": "Ready for immediate submission",
+        "recommendation": "No changes needed; CV is highly competitive"
+      },
+      {
+        "range": "80-89",
+        "rating": "⭐⭐ STRONG",
+        "status": "Ready with optional enhancements",
+        "recommendation": "Ready to submit; consider minor refinements for maximum impact"
+      },
+      {
+        "range": "70-79",
+        "rating": "⭐⭐⭐ ACCEPTABLE",
+        "status": "Acceptable; revisions recommended",
+        "recommendation": "Address flagged sections before submission; improvements recommended"
+      },
+      {
+        "range": "60-69",
+        "rating": "⚠️ NEEDS WORK",
+        "status": "Requires revisions before submission",
+        "recommendation": "Major revisions needed in achievements quantification and business impact"
+      },
+      {
+        "range": "<60",
+        "rating": "❌ WEAK",
+        "status": "Major overhaul required",
+        "recommendation": "Significant restructuring needed; recommend professional review"
+      }
+    ]
+  },
+  "scoring_report_template": {
+    "report_header": {
+      "candidate_name": "[Name]",
+      "evaluation_date": "[Date]",
+      "overall_score": "[X/100]",
+      "rating": "[Rating Level]",
+      "recommendation": "[Action Item]"
+    },
+    "dimension_breakdown": [
+      {
+        "dimension": "Content Quality",
+        "score": "[X/35]",
+        "percentage": "[X%]",
+        "breakdown": {
+          "achievement_quantification": "[X/10]",
+          "senior_level_positioning": "[X/10]",
+          "business_impact_context": "[X/8]",
+          "evidence_density": "[X/7]"
+        },
+        "feedback": "[Specific strengths and gaps]"
+      }
+    ],
+    "flagged_issues": {
+      "critical": ["[If any]"],
+      "high_priority": ["[If any]"],
+      "medium_priority": ["[If any]"],
+      "low_priority": ["[If any]"]
+    },
+    "improvement_recommendations": [
+      "[Specific, actionable suggestion 1]",
+      "[Specific, actionable suggestion 2]",
+      "[Specific, actionable suggestion 3]"
+    ],
+    "before_after_comparison": {
+      "previous_score": "[If applicable]",
+      "score_change": "[+X points]",
+      "key_improvements": ["[Improvement 1]", "[Improvement 2]"]
+    },
+    "benchmark_comparison": {
+      "industry_average": "72",
+      "candidate_score": "[X]",
+      "position_vs_benchmark": "[Above/Below/At]",
+      "percentile": "[X%]"
+    }
+  },
+  "scoring_examples": {
+    "example_1_after_improvement": {
+      "candidate": "Nadine Tolentino - IMPROVED",
+      "scores": {
+        "content_quality": "30/35 (86%)",
+        "structure_compliance": "24/25 (96%)",
+        "tone_language": "20/20 (100%)",
+        "evidence_validation": "11/12 (92%)",
+        "completeness": "8/8 (100%)"
+      },
+      "total_score": "93/100 (93%) - EXCELLENT",
+      "key_improvements": [
+        "Added business impact context (system scale, transaction volume, customer count)",
+        "Positioned mainframe expertise as strategic, specialization-based achievement",
+        "Restructured experience to show career progression (2013-2026 trajectory)",
+        "Converted responsibilities to achievements with quantified metrics",
+        "Reorganized skills by expertise tier (core, supporting, emerging)"
+      ]
+    },
+    "example_2_before_improvement": {
+      "candidate": "Nadine Tolentino - ORIGINAL",
+      "scores": {
+        "content_quality": "18/35 (51%)",
+        "structure_compliance": "23/25 (92%)",
+        "tone_language": "18/20 (90%)",
+        "evidence_validation": "8/12 (67%)",
+        "completeness": "7/8 (88%)"
+      },
+      "total_score": "55/100 (55%) - WEAK",
+      "key_gaps": [
+        "Achievements lack business impact context (-15 points)",
+        "Mainframe expertise not positioned for senior level (-10 points)",
+        "No career progression narrative (-8 points)",
+        "Responsibilities presented without metrics (-12 points)",
+        "Skills not organized by expertise tier (-7 points)"
+      ]
+    }
+  },
+  "continuous_improvement_tracking": {
+    "purpose": "Track CV quality improvements over time and iterations",
+    "metrics_to_track": [
+      "Average dimension scores (content, structure, tone, evidence, completeness)",
+      "Most common gaps (buzzbwords, quantification, business impact)",
+      "Score distribution (how many CVs in each rating band)",
+      "Pre/post improvement scores",
+      "Candidate feedback (did they advance after using improved CV?)"
+    ],
+    "reporting_cadence": "Weekly aggregate; per-candidate on each submission",
+    "success_metrics": {
+      "target_average_score": "≥80 (STRONG)",
+      "target_excellent_rate": "≥60% of CVs scoring 85+",
+      "target_weak_rate": "<5% of CVs scoring <65",
+      "improvement_velocity": "Average 5-point increase per iteration"
+    }
+  },
+  "integration_with_agent": {
+    "when_scoring_applied": "After CV generation and before output",
+    "output_includes": [
+      "Overall score (0-100)",
+      "Dimension breakdown (5 components)",
+      "Detailed feedback with examples",
+      "Prioritized improvement recommendations",
+      "Comparison to industry benchmarks",
+      "Before/after comparison (if applicable)"
+    ],
+    "user_actions_based_on_score": {
+      "score_90_plus": "Approve and export PDF; congratulate candidate",
+      "score_80_89": "Offer minor refinement suggestions; enable export",
+      "score_70_79": "Highlight specific gaps; recommend revisions",
+      "score_60_69": "Require revision before export; detailed feedback",
+      "score_below_60": "Recommend professional review; major restructuring needed"
+    }
+  }
+}
+

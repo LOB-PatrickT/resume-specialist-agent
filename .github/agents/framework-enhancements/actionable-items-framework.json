@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "framework": "Actionable Items & Gap Prompts",
+    "version": "1.0",
+    "description": "Detect missing or weak information in raw CVs and generate concise, targeted prompts for applicants to refine content without exaggeration.",
+    "principles": [
+      "No fabrication: request facts the applicant can verify",
+      "Brevity: keep CV lean; focus on impact, not volume",
+      "Specificity: ask for concrete metrics, scope, and outcomes",
+      "Seniority-aware: different prompts for junior vs senior roles"
+    ]
+  },
+  "detectors": {
+    "missing_scale_context": {
+      "pattern": ["tested", "responsible", "worked on", "performed"],
+      "requires": ["user_count", "client_count", "transaction_volume", "modules"],
+      "prompt": "Add scale context: How many users/clients? Approximate daily/annual transactions? How many modules/components? Why is the system business-critical?"
+    },
+    "no_metrics_in_achievements": {
+      "pattern": ["improved", "optimized", "led", "managed", "developed"],
+      "requires": ["before_metric", "after_metric", "timeframe", "business_outcome"],
+      "prompt": "Quantify outcomes: What changed numerically (before → after)? Over what timeframe? What business impact (time saved, defects prevented, cost avoided)?"
+    },
+    "career_progression_unclear": {
+      "pattern": ["multiple roles with similar responsibilities"],
+      "requires": ["increasing_scope", "team_size", "strategic_decisions", "mentorship"],
+      "prompt": "Show growth: What increased over time (scope, ownership, complexity)? Any team leadership or mentorship? Any strategic process/tool decisions you owned?"
+    },
+    "senior_positioning_weak": {
+      "condition": "experience_years >= 7 AND missing(strategic_indicators)",
+      "requires": ["architecture_decisions", "process_standards", "org_impact"],
+      "prompt": "For senior roles: Which testing strategies or standards did you architect? What organizational improvements or decisions did you drive?"
+    },
+    "skills_flat_list": {
+      "condition": "skills_listed_without_levels_or_years",
+      "requires": ["proficiency_level", "years_of_use", "evidence_project"],
+      "prompt": "Refine skills: Add level (Basic/Intermediate/Advanced/Expert), years of use, and 1 evidence example per core skill."
+    },
+    "languages_not_cefr": {
+      "condition": "languages_with_subjective_terms",
+      "requires": ["cefr_level", "optional_cert"],
+      "prompt": "Convert languages to CEFR (A1–C2). If available, add certification and date."
+    },
+    "dates_non_eu_format": {
+      "condition": "date_format_violations",
+      "requires": ["dd/mm/yyyy_or_month_yyyy"],
+      "prompt": "Standardize dates to DD/MM/YYYY or 'Month YYYY' (e.g., 15 May 2024)."
+    },
+    "location_missing": {
+      "condition": "role_location_missing",
+      "requires": ["city_country_or_remote"],
+      "prompt": "Add location per role (City, Country) or mark as Remote."
+    },
+    "cert_dates_missing": {
+      "condition": "certifications_without_dates",
+      "requires": ["issue_date", "expiry_date_optional"],
+      "prompt": "Add certification dates (DD/MM/YYYY) and expiration if applicable."
+    }
+  },
+  "actionable_item_output_schema": {
+    "type": "object",
+    "properties": {
+      "section": {"type": "string"},
+      "item": {"type": "string"},
+      "severity": {"type": "string", "enum": ["critical", "high", "medium", "low"]},
+      "why_it_matters": {"type": "string"},
+      "exact_prompt_to_user": {"type": "string"},
+      "example_good_answer": {"type": "string"}
+    }
+  },
+  "brevity_and_bloat_controls": {
+    "max_bullets_per_role": 6,
+    "preferred_bullets_per_role": 3,
+    "max_line_length_chars": 220,
+    "rules": [
+      "Use one idea per bullet; remove filler words",
+      "Prefer numbers over adjectives",
+      "Avoid repeating the same responsibility across roles; move to 'Previous Experience' if old",
+      "For senior roles: prioritize 3-4 highest-impact achievements"
+    ]
+  },
+  "role_specific_prompts": {
+    "qa_engineer": [
+      "How many test cases/regression cases did you own or automate?",
+      "What was the defect escape rate before and after your work?",
+      "What was the code coverage or test coverage achieved?",
+      "How many modules/systems were in scope?",
+      "What was the size of the user base or transaction volume?",
+      "Any compliance frameworks (e.g., PCI-DSS) you ensured?"
+    ],
+    "mainframe_tester": [
+      "Which mainframe technologies (e.g., COBOL, JCL) and simulators were used?",
+      "What annual transaction volume did the system process?",
+      "Any uptime/SLA figures you helped maintain?",
+      "Any automation ratio improvements you led (manual → automated)?",
+      "Any audit/compliance outcomes you influenced?"
+    ]
+  },
+  "report_template": {
+    "title": "Actionable Items to Strengthen Your CV",
+    "intro": "Your experience is strong. The items below will help present it with clear impact and seniority while keeping the CV concise and professional.",
+    "items": [
+      {
+        "section": "Work Experience — Scale Context",
+        "item": "Add user/client and transaction scale for key platforms",
+        "severity": "high",
+        "why_it_matters": "Demonstrates system criticality and senior-level scope",
+        "exact_prompt_to_user": "For your HRIS/payroll and mainframe roles, how many clients/users were served, and what was the approximate transaction volume handled annually?",
+        "example_good_answer": "HRIS platform: 500+ client companies, 200K+ end users; Mainframe credit card clearing: 50M+ annual transactions"
+      }
+    ]
+  }
+}
+

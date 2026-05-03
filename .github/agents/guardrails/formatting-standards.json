@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "framework": "Europass Formatting Standards",
+    "version": "1.0",
+    "description": "Standardized formatting, date conventions, and structure enforcement",
+    "europass_compliant": true
+  },
+  "date_formatting": {
+    "standard": "European format mandatory",
+    "primary_format": "DD/MM/YYYY",
+    "alternative_format": "Month Name YYYY (e.g., 'May 2024')",
+    "prohibited_format": "MM/DD/YYYY (US format - causes confusion)",
+    "enforcement": "Hard conversion - all dates must be transformed",
+    "examples": {
+      "correct": [
+        "15 May 2024",
+        "15/05/2024",
+        "May 2024"
+      ],
+      "incorrect": [
+        "5/15/2024",
+        "05-15-2024",
+        "2024-05-15",
+        "May 15, 2024"
+      ]
+    },
+    "ongoing_dates": {
+      "representation": "Use 'Present' or 'To date' for current positions",
+      "format_example": "1 January 2022 - Present"
+    }
+  },
+  "reverse_chronological_order": {
+    "requirement": "ALL dated sections must be strictly reverse-chronological (newest first)",
+    "applies_to": [
+      "Work Experience",
+      "Education & Training",
+      "Certifications",
+      "Publications"
+    ],
+    "validation": {
+      "check": "Compare end dates of consecutive entries; flag if not in descending order",
+      "auto_correct": true
+    },
+    "example_correct": [
+      "2023 - Present: Position A",
+      "2020 - 2023: Position B",
+      "2018 - 2020: Position C"
+    ],
+    "example_incorrect": [
+      "2018 - 2020: Position C",
+      "2020 - 2023: Position B",
+      "2023 - Present: Position A"
+    ]
+  },
+  "length_constraints": {
+    "absolute_maximum": "2 pages",
+    "preferred_length": "1 page",
+    "enforcement": "Hard limit - content beyond 2 pages will be rejected",
+    "strategy_for_excess": {
+      "step_1": "Consolidate entries older than 10 years into single 'Previous Experience' line",
+      "step_2": "Reduce descriptions to essential duties only",
+      "step_3": "Remove redundant skills (consolidate into single mention)",
+      "step_4": "Archive older education/certifications or list without description"
+    },
+    "priority_preservation": [
+      "1. Most recent 5 years of work experience",
+      "2. Highest relevant education level",
+      "3. Critical certifications",
+      "4. Language skills",
+      "5. Key technical skills"
+    ],
+    "consolidation_example": {
+      "original": [
+        "2010 - 2012: Junior Developer",
+        "2008 - 2010: IT Support Specialist",
+        "2006 - 2008: Help Desk Technician"
+      ],
+      "consolidated": [
+        "2006 - 2012: Previous roles in technical support and junior development"
+      ]
+    }
+  },
+  "section_structure": {
+    "requirement": "Fixed hierarchy for consistency",
+    "mandatory_sections": [
+      "Personal Information",
+      "Professional Profile/Summary"
+    ],
+    "core_sections": [
+      "Work Experience",
+      "Education & Training",
+      "Language Skills",
+      "Digital/Technical Skills"
+    ],
+    "optional_sections": [
+      "Certifications & Accreditations",
+      "Publications",
+      "Projects",
+      "Driving Licence",
+      "Additional Information"
+    ],
+    "prohibited_sections": [
+      "References (mention 'Available upon request' instead)",
+      "Photograph (unless job requirement)",
+      "Salary information"
+    ]
+  },
+  "entry_formatting": {
+    "work_experience_template": {
+      "date_range": "DD/MM/YYYY - DD/MM/YYYY",
+      "job_title": "Official job title",
+      "employer": "Full organization name",
+      "location": "City/Region (optional for remote: Remote)",
+      "duties": "2-4 concise duty statements using action verbs",
+      "achievements": "2-3 measurable achievements with metrics"
+    },
+    "education_template": {
+      "date": "YYYY or DD/MM/YYYY",
+      "qualification": "Degree/Qualification name",
+      "principal_subjects": "Main study areas (if relevant)",
+      "institution": "University/Institution name",
+      "location": "City/Country"
+    },
+    "action_verbs": [
+      "Accelerated",
+      "Achieved",
+      "Delivered",
+      "Designed",
+      "Directed",
+      "Enhanced",
+      "Executed",
+      "Expanded",
+      "Implemented",
+      "Improved",
+      "Increased",
+      "Initiated",
+      "Led",
+      "Managed",
+      "Optimized",
+      "Oversaw",
+      "Pioneered",
+      "Reduced",
+      "Reorganized",
+      "Restructured",
+      "Streamlined",
+      "Supervised",
+      "Transformed"
+    ]
+  },
+  "typography_standards": {
+    "font_family": "Professional sans-serif recommended (Arial, Calibri, Helvetica, Verdana)",
+    "font_size": "10-12pt",
+    "alignment": "Left-aligned",
+    "line_spacing": "1.15 - 1.5",
+    "margins": "2-2.5cm on all sides",
+    "text_emphasis": {
+      "bold": "Section headers and job titles only",
+      "italics": "Organization names or qualifications (optional)",
+      "underline": "Avoid if possible; use bold instead"
+    }
+  },
+  "file_format": {
+    "primary": "PDF (ensures formatting preservation)",
+    "acceptable": [
+      "DOCX (Microsoft Word)",
+      "ODT (OpenDocument)",
+      "RTF (Rich Text Format)"
+    ],
+    "prohibited": [
+      "HTML",
+      "Plain text (.txt)",
+      "Google Docs (share as PDF instead)"
+    ],
+    "naming_convention": "FirstName_LastName_CV.pdf"
+  },
+  "validation_checks": {
+    "check_1": {
+      "name": "Date Format Consistency",
+      "rule": "All dates must match primary or alternative European format",
+      "auto_correction": true
+    },
+    "check_2": {
+      "name": "Reverse Chronological Order",
+      "rule": "Each section must be ordered newest to oldest",
+      "auto_correction": true
+    },
+    "check_3": {
+      "name": "Length Compliance",
+      "rule": "Content must not exceed 2 pages",
+      "auto_correction": false,
+      "escalation": "Request user to consolidate content"
+    },
+    "check_4": {
+      "name": "File Format Validation",
+      "rule": "Must be PDF or accepted document format",
+      "auto_correction": false,
+      "escalation": "Request conversion to PDF"
+    },
+    "check_5": {
+      "name": "Section Completeness",
+      "rule": "All mandatory sections present",
+      "auto_correction": false,
+      "escalation": "Identify missing sections"
+    }
+  },
+  "brevity_and_lean_style": {
+    "objective": "Keep CV lean, direct, and time-efficient for reviewers",
+    "max_bullets_per_recent_role": 6,
+    "preferred_bullets_per_recent_role": 3,
+    "max_bullets_older_role": 2,
+    "max_line_length_chars": 220,
+    "rules": [
+      "Use one result per bullet, lead with the metric where possible",
+      "Avoid filler and stacked adjectives; prefer numbers over adjectives",
+      "Combine repetitive responsibilities; remove low-impact tasks",
+      "If content exceeds 2 pages, consolidate roles >10 years old into 'Previous Experience'"
+    ]
+  },
+  "senior_role_requirements": {
+    "applicability": "Senior titles or >=7 years experience",
+    "first_line": "Include a Scope line before bullets (users/clients, transactions, modules, criticality)",
+    "bullets_format": "Label bullets as Strategic Achievements; prioritize impact over activity",
+    "examples": {
+      "scope_line": "Scope: Enterprise HRIS/Payroll platform serving 500+ clients; 200K+ end-users; $2.5B+ annual transactions",
+      "metric_first_bullet": "Reduced defect escape rate from 8% to 2% by architecting regression strategy (400+ cases)"
+    }
+  },
+  "links": {
+    "business_impact_framework": ".github/agents/framework-enhancements/business-impact-framework.json",
+    "actionable_items_framework": ".github/agents/framework-enhancements/actionable-items-framework.json",
+    "scoring_system": ".github/agents/framework-enhancements/cv-scoring-system.json"
+  }
+}

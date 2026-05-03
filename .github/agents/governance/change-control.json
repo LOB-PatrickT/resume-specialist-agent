@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "name": "Change Control Policy (Hard Rule)",
+    "version": "1.0",
+    "description": "Mandatory human verification gate before any repository-changing action by the Resume Specialist agent.",
+    "effective_date": "2026-05-03"
+  },
+  "approvers": [
+    {
+      "name": "Owner",
+      "role": "primary-approver",
+      "contact": "owner@local"
+    }
+  ],
+  "scope": {
+    "requires_approval_for": [
+      "Creating, editing, or deleting files under .github/agents/**",
+      "Modifying guardrails, context-gates, skill-cards, frameworks, quick-commands",
+      "Changing scoring, seniority classification, or governance policy",
+      "Any operation labeled as mutating in the plan"
+    ],
+    "exemptions": [
+      "Non-persistent content generation (one-off summaries, social posts)",
+      "Read-only analysis and scoring"
+    ]
+  },
+  "process": {
+    "steps": [
+      "1) Agent drafts a proposal using propose-change (no edits yet)",
+      "2) Human reviews and either approve-change or reject-change",
+      "3) Only after approval, agent executes the plan and logs to revision history",
+      "4) Post-change validation and summary are recorded"
+    ],
+    "required_proposal_sections": [
+      "goals",
+      "files_to_change (paths + reason)",
+      "diff_summary_or_examples",
+      "risk_level (low/medium/high) with rationale",
+      "validation_plan",
+      "rollback_plan"
+    ],
+    "risk_matrix": {
+      "low": "Cosmetic docs, non-functional text changes",
+      "medium": "Adds new capabilities without changing existing behavior",
+      "high": "Alters enforcement, scoring, guardrails, or structure"
+    }
+  },
+  "records": {
+    "proposals_dir": ".github/agents/governance/proposals",
+    "log_file": ".github/agents/revision-history/REVISION_HISTORY.md"
+  },
+  "enforcement": {
+    "mutations_must_include": [
+      "approved_proposal_id",
+      "proposal_hash"
+    ],
+    "deny_on_missing": true
+  }
+}
+

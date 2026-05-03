@@ -1,0 +1,34 @@
+{
+  "proposal_template": {
+    "id": "auto-generated",
+    "status": "PENDING",
+    "created_at": "ISO-8601",
+    "requester": "agent",
+    "title": "<short title>",
+    "goals": ["<goal 1>", "<goal 2>"],
+    "files_to_change": [
+      {"path": "<file path>", "reason": "<why>", "type": "create|edit|delete"}
+    ],
+    "diff_summary_or_examples": "<high-level examples of planned edits>",
+    "risk_level": "low|medium|high",
+    "risk_rationale": "<why this risk level>",
+    "validation_plan": ["<lint|schema|consistency checks>"],
+    "rollback_plan": "<how to revert>",
+    "metadata": {"proposal_hash": "<hash>"}
+  },
+  "approval_record": {
+    "proposal_id": "<id>",
+    "status": "APPROVED",
+    "approver": "<name>",
+    "approved_at": "ISO-8601",
+    "notes": "<optional>"
+  },
+  "rejection_record": {
+    "proposal_id": "<id>",
+    "status": "REJECTED",
+    "approver": "<name>",
+    "rejected_at": "ISO-8601",
+    "notes": "<optional>"
+  }
+}
+

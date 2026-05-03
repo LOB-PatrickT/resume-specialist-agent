@@ -1,0 +1,249 @@
+{
+  "metadata": {
+    "framework": "European Compliance & Legal Standards",
+    "version": "1.0",
+    "description": "Legal and compliance requirements for European CV standards and data protection",
+    "relevant_standards": [
+      "GDPR (General Data Protection Regulation)",
+      "Europass Framework",
+      "Individual country employment laws"
+    ]
+  },
+  "gdpr_compliance": {
+    "principle": "Personal data must be processed lawfully and transparently",
+    "data_minimization": {
+      "rule": "Only include personal data necessary for job application",
+      "apply_to": "All CVs created by this agent",
+      "implications": [
+        {
+          "data_type": "Full name",
+          "assessment": "Necessary",
+          "include": true
+        },
+        {
+          "data_type": "Email address",
+          "assessment": "Necessary",
+          "include": true
+        },
+        {
+          "data_type": "Phone number",
+          "assessment": "Recommended but not mandatory",
+          "include": "Optional (user decision)"
+        },
+        {
+          "data_type": "Date of birth",
+          "assessment": "Not necessary (risks age discrimination)",
+          "include": false
+        },
+        {
+          "data_type": "Home address",
+          "assessment": "Not necessary (city/country sufficient)",
+          "include": false
+        },
+        {
+          "data_type": "Photograph",
+          "assessment": "Not necessary unless explicitly required by employer",
+          "include": false
+        },
+        {
+          "data_type": "Health information",
+          "assessment": "Sensitive data; highly restricted",
+          "include": false,
+          "exception": "Only if job-critical (e.g., occupational physician role)"
+        }
+      ]
+    },
+    "special_category_data": {
+      "definition": "Data revealing racial/ethnic origin, political opinions, religious beliefs, trade union membership, genetic data, biometric data, health status, sex life/sexual orientation",
+      "rule": "Never include in CV",
+      "enforcement": "Auto-detect and remove with warning"
+    },
+    "right_to_erasure": {
+      "note": "CVs created by this agent contain no unnecessary tracking or persistent identifiers; users can request removal at any time"
+    }
+  },
+  "europass_requirements": {
+    "official_source": "https://europass.cedefop.europa.eu/",
+    "scope": "Recognized across all EU Member States and most countries worldwide",
+    "mandatory_elements": [
+      "Clear reverse-chronological structure",
+      "CEFR language certification",
+      "Evidence-based skills (not subjective)",
+      "Professional tone without marketing language"
+    ],
+    "language_of_cv": {
+      "recommendation": "Use language of target job market",
+      "guidance": "If applying in Germany, CV can be in German or English; Spanish positions accept Spanish or English, etc.",
+      "multi_language_option": "Can provide both EU and local variants per country"
+    }
+  },
+  "country_specific_considerations": {
+    "note": "Europass applies globally, but some countries have local preferences",
+    "eu_countries": {
+      "standard": "Strictly follow Europass format",
+      "variations": "Some countries have minor formatting preferences but Europass is universally accepted"
+    },
+    "non_eu_remote": {
+      "standard": "Apply Europass as international standard",
+      "note": "Remote applicants from non-EU countries can use this agent without modification"
+    },
+    "key_countries": [
+      {
+        "country": "Germany",
+        "note": "Europass standard; CV slightly longer than FR/ES is acceptable"
+      },
+      {
+        "country": "France",
+        "note": "Europass standard; traditional CV (Curriculum Vitae) format very common"
+      },
+      {
+        "country": "Spain",
+        "note": "Europass standard; often includes brief motivation letter"
+      },
+      {
+        "country": "Benelux (NL, BE, LU)",
+        "note": "Europass standard; very formal and structured expected"
+      },
+      {
+        "country": "Scandinavian countries",
+        "note": "Europass standard; often prefer concise, data-driven format"
+      }
+    ]
+  },
+  "age_discrimination_prevention": {
+    "principle": "CVs should not reveal or emphasize age to prevent age-based screening",
+    "prohibited": [
+      "Date of birth",
+      "Age",
+      "Graduation years older than 20 years (unless directly relevant)",
+      "Phrases like 'recent graduate' or 'seasoned professional'"
+    ],
+    "chronological_dates_ok": [
+      "Employment dates (factual, not age-revealing)",
+      "Educational graduation year (only if recent or highly relevant)",
+      "Certification dates"
+    ],
+    "example_problem": {
+      "bad": "20+ years of experience since 2000",
+      "good": "Senior engineer with extensive enterprise software delivery"
+    }
+  },
+  "disability_and_inclusion": {
+    "principle": "CVs should include accommodation needs only if strategically relevant",
+    "guidelines": [
+      {
+        "scenario": "Applicant has disability requiring workplace accommodation",
+        "recommendation": "Do NOT disclose in CV; disclose to HR after job offer or during onboarding"
+      },
+      {
+        "scenario": "Applicant's disability is visible or directly job-relevant",
+        "recommendation": "Can be mentioned in 'Additional Information' section if desired"
+      }
+    ]
+  },
+  "military_service": {
+    "applicability": "Some EU countries (France, Spain, Germany historically) required conscription",
+    "current_practice": "Include only if recent and strategically relevant to demonstrate discipline or specific training",
+    "format": "If included, list under 'Additional Information'"
+  },
+  "driving_licence": {
+    "inclusion_rule": "Include ONLY if required by job description",
+    "format":  "EU standard notation (e.g., 'Category B')",
+    "example_relevant": "Logistics coordinator, delivery driver, field technician",
+    "example_irrelevant": "Software engineer, data analyst (do not include unless specified)"
+  },
+  "employment_contract_types": {
+    "eu_terminology": [
+      {
+        "type": "Full-time permanent contract",
+        "notation": "CDI (Contrat à Durée Indéterminée) in French, unbefristeter Vertrag in German"
+      },
+      {
+        "type": "Fixed-term / Temporary",
+        "notation": "CDD in French, befristeter Vertrag in German"
+      },
+      {
+        "type": "Freelance / Self-employed",
+        "notation": "Travailleur indépendant (French), Freiberufler (German)"
+      },
+      {
+        "type": "Temporary agency work",
+        "notation": "Mission temp'orale (French), Zeitarbeit (German)"
+      }
+    ],
+    "disclosure": "Can include contract type for clarity; no negative judgment attached"
+  },
+  "remote_work_notation": {
+    "current_status": "Remote work is normalized and fully accepted across EU",
+    "notation": "List workplace as 'Remote' or 'Remote (EU-based)' if applicable",
+    "no_stigma": "Remote positions are equally valued; no requirement to declare relocation intent"
+  },
+  "certification_verification": {
+    "rule": "Only include certifications from recognized bodies",
+    "accepted": [
+      "University degrees (accredited institutions)",
+      "Professional certifications (AWS, Google Cloud, Microsoft, etc.)",
+      "Government-recognized qualifications",
+      "Industry-standard credentials (project management, quality, etc.)"
+    ],
+    "scrutinized": [
+      "Online courses without formal accreditation (optional to include)",
+      "In-house training programs (list as 'Professional Development' only)",
+      "Unrecognized 'certifications' from non-standard providers"
+    ],
+    "removal_rule": "Certifications from non-verifiable sources will be flagged"
+  },
+  "sectoral_regulations": {
+    "regulated_professions": [
+      {
+        "sector": "Healthcare",
+        "requirement": "Must declare relevant board certifications and licenses"
+      },
+      {
+        "sector": "Legal",
+        "requirement": "Must certify bar association membership and registration"
+      },
+      {
+        "sector": "Finance",
+        "requirement": "Compliance certifications (MiFID, CySEC, etc.) must be current"
+      },
+      {
+        "sector": "Education",
+        "requirement": "Teaching credentials and accreditation must be clearly stated"
+      }
+    ]
+  },
+  "validation_checks": {
+    "check_1": {
+      "name": "GDPR Data Minimization",
+      "rule": "Ensure only necessary personal data is included",
+      "auto_detection": true,
+      "action": "Flag and remove unnecessary personal data"
+    },
+    "check_2": {
+      "name": "Special Category Data Detection",
+      "rule": "Detect and remove sensitive data",
+      "auto_detection": true,
+      "action": "Auto-remove with user notification"
+    },
+    "check_3": {
+      "name": "Age Discrimination Prevention",
+      "rule": "Check for age-revealing content",
+      "auto_detection": true,
+      "action": "Flag for review and removal suggestion"
+    },
+    "check_4": {
+      "name": "Europass Compliance",
+      "rule": "Verify structure follows Europass requirements",
+      "auto_detection": true,
+      "action": "Reject and request restructuring if non-compliant"
+    },
+    "check_5": {
+      "name": "Certification Verification",
+      "rule": "Validate certification legitimacy",
+      "auto_detection": false,
+      "action": "Flag suspicious certifications for user review"
+    }
+  }
+}
+

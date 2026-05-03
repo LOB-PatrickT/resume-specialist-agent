@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "framework": "Europass Digital Skills Framework",
+    "version": "1.0",
+    "description": "Taxonomy for categorizing digital and technical skills",
+    "europass_compliant": true,
+    "reference": "https://europass.cedefop.europa.eu/resources/digital-skills-framework"
+  },
+  "categories": {
+    "information_processing": {
+      "code": "IP",
+      "description": "Ability to search, find, retrieve and organize digital information",
+      "examples": [
+        "Database management",
+        "Data analysis",
+        "Information retrieval (Google Scholar, repositories)",
+        "Data visualization",
+        "Business Intelligence tools"
+      ],
+      "proficiency_levels": ["Basic", "Intermediate", "Advanced"]
+    },
+    "content_creation": {
+      "code": "CC",
+      "description": "Ability to create and edit digital content",
+      "examples": [
+        "Word processing",
+        "Spreadsheet creation",
+        "Presentation design",
+        "Video/audio editing",
+        "Web development",
+        "Graphic design",
+        "Coding and programming",
+        "Content management systems"
+      ],
+      "proficiency_levels": ["Basic", "Intermediate", "Advanced"]
+    },
+    "communication": {
+      "code": "COM",
+      "description": "Ability to interact, communicate and collaborate using digital tools",
+      "examples": [
+        "Email communication",
+        "Video conferencing (Zoom, Teams, Google Meet)",
+        "Instant messaging (Slack, Teams)",
+        "Collaboration platforms (Asana, Monday.com)",
+        "Social media management",
+        "Project management tools",
+        "Virtual team collaboration"
+      ],
+      "proficiency_levels": ["Basic", "Intermediate", "Advanced"]
+    },
+    "safety": {
+      "code": "SAF",
+      "description": "Ability to protect personal data and digital identity",
+      "examples": [
+        "Cybersecurity awareness",
+        "Password management",
+        "Phishing recognition",
+        "Data privacy compliance (GDPR)",
+        "Secure data handling",
+        "Identity verification",
+        "Antivirus/malware protection"
+      ],
+      "proficiency_levels": ["Basic", "Intermediate", "Advanced"]
+    },
+    "problem_solving": {
+      "code": "PS",
+      "description": "Ability to use digital tools to solve problems and innovate",
+      "examples": [
+        "Troubleshooting technical issues",
+        "Automation scripting",
+        "API integration",
+        "System administration",
+        "Cloud computing",
+        "AI tool usage",
+        "Process optimization through technology"
+      ],
+      "proficiency_levels": ["Basic", "Intermediate", "Advanced"]
+    }
+  },
+  "data_structure": {
+    "type": "object",
+    "properties": {
+      "skill_name": {
+        "type": "string",
+        "description": "Formal name of the technical skill"
+      },
+      "category": {
+        "type": "string",
+        "enum": ["information_processing", "content_creation", "communication", "safety", "problem_solving"],
+        "description": "Primary taxonomy category"
+      },
+      "proficiency_level": {
+        "type": "string",
+        "enum": ["Basic", "Intermediate", "Advanced"],
+        "description": "Proficiency level within category"
+      },
+      "years_of_experience": {
+        "type": "number",
+        "description": "Total years of demonstrated use"
+      },
+      "evidence": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "Where/when this skill was demonstrated (projects, roles)"
+      },
+      "certification": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "issuer": {"type": "string"},
+          "date": {"type": "string", "pattern": "^\\d{2}/\\d{2}/\\d{4}$"}
+        }
+      }
+    }
+  }
+}
+

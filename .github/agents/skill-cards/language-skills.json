@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "framework": "CEFR",
+    "version": "1.0",
+    "description": "Common European Framework of Reference for Languages standardization",
+    "europass_compliant": true
+  },
+  "cefr_scale": [
+    {
+      "level": "A1",
+      "label": "Beginner",
+      "description": "Can understand and use familiar everyday expressions",
+      "europass_equivalent": "Elementary Proficiency"
+    },
+    {
+      "level": "A2",
+      "label": "Elementary",
+      "description": "Can understand sentences and frequently used expressions",
+      "europass_equivalent": "Elementary Proficiency"
+    },
+    {
+      "level": "B1",
+      "label": "Intermediate",
+      "description": "Can produce simple connected text on familiar topics",
+      "europass_equivalent": "Independent User"
+    },
+    {
+      "level": "B2",
+      "label": "Upper Intermediate",
+      "description": "Can interact with fluency and spontaneity without much effort",
+      "europass_equivalent": "Independent User"
+    },
+    {
+      "level": "C1",
+      "label": "Advanced",
+      "description": "Can express ideas fluently and spontaneously without searching for words",
+      "europass_equivalent": "Proficient User"
+    },
+    {
+      "level": "C2",
+      "label": "Proficient/Master",
+      "description": "Can use the language with complete spontaneity and precision",
+      "europass_equivalent": "Proficient User"
+    }
+  ],
+  "language_competencies": {
+    "listening": "Receptive Skill - Ability to understand spoken language",
+    "reading": "Receptive Skill - Ability to understand written language",
+    "spoken_interaction": "Productive Skill - Ability to engage in dialogue",
+    "spoken_production": "Productive Skill - Ability to produce monologues",
+    "writing": "Productive Skill - Ability to produce written text"
+  },
+  "mapping_rules": {
+    "subjective_to_cefr": {
+      "native": "C2",
+      "mother_tongue": "C2",
+      "fluent": "C1",
+      "proficient": "C1",
+      "advanced": "C1",
+      "upper_intermediate": "B2",
+      "conversational": "B1",
+      "competent": "B1",
+      "intermediate": "B1",
+      "elementary": "A2",
+      "beginner": "A1",
+      "limited": "A1"
+    }
+  },
+  "data_structure": {
+    "type": "object",
+    "properties": {
+      "language_name": {
+        "type": "string",
+        "description": "ISO 639-1 language code recommended (e.g., 'en', 'de', 'fr')"
+      },
+      "cefr_level": {
+        "type": "string",
+        "enum": ["A1", "A2", "B1", "B2", "C1", "C2"],
+        "description": "Standardized CEFR level"
+      },
+      "competencies": {
+        "type": "object",
+        "properties": {
+          "listening": {"type": "string", "enum": ["A1", "A2", "B1", "B2", "C1", "C2"]},
+          "reading": {"type": "string", "enum": ["A1", "A2", "B1", "B2", "C1", "C2"]},
+          "spoken_interaction": {"type": "string", "enum": ["A1", "A2", "B1", "B2", "C1", "C2"]},
+          "spoken_production": {"type": "string", "enum": ["A1", "A2", "B1", "B2", "C1", "C2"]},
+          "writing": {"type": "string", "enum": ["A1", "A2", "B1", "B2", "C1", "C2"]}
+        },
+        "description": "Optional: Granular breakdown by competency type"
+      },
+      "certification": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "date": {"type": "string", "pattern": "^\\d{2}/\\d{2}/\\d{4}$"},
+          "issuer": {"type": "string"}
+        }
+      }
+    }
+  }
+}
+

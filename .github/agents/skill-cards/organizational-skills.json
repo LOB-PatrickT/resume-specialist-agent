@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "framework": "Europass Organizational Skills",
+    "version": "1.0",
+    "description": "Skills related to planning, organizing, managing resources and driving organizational outcomes",
+    "europass_compliant": true,
+    "note": "These skills demonstrate capability to manage processes, people, and outcomes - extracted from role responsibilities"
+  },
+  "categories": {
+    "leadership": {
+      "description": "Ability to guide, influence and direct teams or initiatives",
+      "competencies": [
+        "Team supervision",
+        "Project leadership",
+        "Decision-making authority",
+        "Strategic direction",
+        "Performance management",
+        "Mentoring and development",
+        "Initiative ownership"
+      ]
+    },
+    "planning_organization": {
+      "description": "Ability to structure work, set objectives and ensure execution",
+      "competencies": [
+        "Project planning",
+        "Timeline management",
+        "Resource allocation",
+        "Process design",
+        "Priority setting",
+        "Workload balancing",
+        "Risk management"
+      ]
+    },
+    "results_orientation": {
+      "description": "Ability to deliver measurable outcomes and achieve goals",
+      "competencies": [
+        "KPI achievement",
+        "Delivery consistency",
+        "Quality assurance",
+        "Process improvement",
+        "Accountability",
+        "Performance tracking",
+        "Goal attainment"
+      ]
+    },
+    "analytical_judgment": {
+      "description": "Ability to evaluate information and make informed decisions",
+      "competencies": [
+        "Data interpretation",
+        "Business acumen",
+        "Strategic thinking",
+        "Problem assessment",
+        "Trend analysis",
+        "Risk evaluation",
+        "Recommendation synthesis"
+      ]
+    },
+    "initiative": {
+      "description": "Ability to identify opportunities and take action independently",
+      "competencies": [
+        "Proactive problem-solving",
+        "Innovation implementation",
+        "Process improvement",
+        "Self-directed learning",
+        "Opportunity identification",
+        "Continuous enhancement",
+        "Autonomy in execution"
+      ]
+    }
+  },
+  "extraction_guidelines": {
+    "principle": "Extract from specific role responsibilities and measurable outcomes",
+    "prohibited_source_terms": [
+      "natural leader",
+      "born leader",
+      "results-driven",
+      "go-getter",
+      "self-starter",
+      "visionary",
+      "guru"
+    ],
+    "conversion_examples": [
+      {
+        "raw_claim": "Results-driven professional with proven leadership",
+        "extracted_skills": ["Leadership", "Results Orientation"],
+        "evidence_based_rewrite": "Supervised team of 8; increased department efficiency by 25% through process redesign; delivered 12/12 projects on schedule"
+      },
+      {
+        "raw_claim": "Self-starter who loves taking initiative",
+        "extracted_skills": ["Initiative"],
+        "evidence_based_rewrite": "Identified inefficiency in legacy reporting system; implemented new automation tool reducing processing time by 60%"
+      },
+      {
+        "raw_claim": "Strategic thinker and innovative problem solver",
+        "extracted_skills": ["Analytical Judgment", "Initiative"],
+        "evidence_based_rewrite": "Analyzed market data to identify 3 new revenue streams; developed and pitched expansion strategy to board"
+      }
+    ]
+  },
+  "leadership_scale": {
+    "description": "When extracting leadership, specify role scope",
+    "levels": [
+      {
+        "level": "team_lead",
+        "description": "Direct supervision of 1-5 people",
+        "minimum_evidence": "Named team member count, responsibility type"
+      },
+      {
+        "level": "manager",
+        "description": "Management of 5-15 people or multiple projects",
+        "minimum_evidence": "Team size, reporting structure, key achievements"
+      },
+      {
+        "level": "senior_manager",
+        "description": "Leadership of 15+ people, department, or strategic initiative",
+        "minimum_evidence": "Department scope, budget responsibility, strategic outcomes"
+      },
+      {
+        "level": "executive",
+        "description": "C-level or equivalent strategic leadership",
+        "minimum_evidence": "Portfolio scope, board interaction, organizational impact"
+      }
+    ]
+  },
+  "data_structure": {
+    "type": "object",
+    "properties": {
+      "skill_name": {
+        "type": "string",
+        "description": "Organizational competency identifier"
+      },
+      "category": {
+        "type": "string",
+        "enum": ["leadership", "planning_organization", "results_orientation", "analytical_judgment", "initiative"],
+        "description": "Primary organizational category"
+      },
+      "leadership_scope": {
+        "type": "string",
+        "enum": ["individual_contributor", "team_lead", "manager", "senior_manager", "executive"],
+        "description": "If applicable to leadership category"
+      },
+      "measurable_outcomes": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "metric": {"type": "string", "description": "What was measured"},
+            "baseline": {"type": "string", "description": "Starting point"},
+            "achievement": {"type": "string", "description": "Result achieved"},
+            "unit": {"type": "string", "description": "Unit of measurement"}
+          }
+        },
+        "description": "Quantified evidence of skill demonstration"
+      },
+      "proficiency_level": {
+        "type": "string",
+        "enum": ["Basic", "Intermediate", "Advanced"],
+        "description": "Based on scope and measurable impact"
+      }
+    }
+  }
+}
+

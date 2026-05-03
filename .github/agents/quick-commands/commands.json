@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "name": "Quick Commands Catalog",
+    "version": "1.0",
+    "mcp_ready": true,
+    "description": "One-shot, task-focused commands to speed up common resume specialist actions without bloating core flow.",
+    "notes": [
+      "Commands consume already-parsed applicant data if present; otherwise fall back to raw CV extractor.",
+      "All outputs must respect guardrails: tone-and-language, formatting-standards, content-constraints.",
+      "Outputs should be concise and evidence-based; no fabrication."
+    ]
+  },
+  "commands": [
+    {
+      "id": "generate-linkedin-post",
+      "aliases": ["generate linkedin post feed", "linkedin-post", "post:linkedin"],
+      "description": "Create a short, recruiter-friendly LinkedIn post highlighting roles, location, impact, and industries.",
+      "inputs": {
+        "required": ["roles", "location"],
+        "optional": ["industries", "highlights", "emojis", "hashtags", "availability", "contact"]
+      },
+      "options": {
+        "style": {"enum": ["impact_first", "industry_focus", "recruiter_friendly"]},
+        "emoji_intensity": {"enum": ["none", "minimal", "standard"], "default": "minimal"},
+        "bullet_cap": {"type": "number", "default": 4}
+      },
+      "guardrails": [
+        ".github/agents/guardrails/tone-and-language.json",
+        ".github/agents/guardrails/formatting-standards.json",
+        ".github/agents/guardrails/content-constraints.json"
+      ],
+      "templates_ref": ".github/agents/quick-commands/templates.json#linkedin_post"
+    },
+    {
+      "id": "generate-professional-summary",
+      "aliases": ["generate professional summary", "summary:professional"],
+      "description": "Produce a 3–4 sentence professional summary for job platforms (Europass-compliant tone).",
+      "inputs": {
+        "required": ["total_years", "core_domains"],
+        "optional": ["industries", "key_impacts", "certifications", "seniority_level"]
+      },
+      "options": {
+        "length": {"enum": ["short", "standard"], "default": "standard"}
+      },
+      "constraints": {
+        "sentences_max": 4,
+        "no_first_person": true,
+        "no_buzzwords": true
+      },
+      "guardrails": [
+        ".github/agents/guardrails/tone-and-language.json",
+        ".github/agents/context-gates/cv-structure.json"
+      ],
+      "templates_ref": ".github/agents/quick-commands/templates.json#professional_summary"
+    },
+    {
+      "id": "generate-actionable-items",
+      "aliases": ["generate actionable items", "action:items"],
+      "description": "Return prioritized prompts to fill information gaps (metrics, scope, outcomes).",
+      "inputs": {"required": [], "optional": ["profession"]},
+      "guardrails": [
+        ".github/agents/framework-enhancements/actionable-items-framework.json"
+      ]
+    },
+    {
+      "id": "score-cv",
+      "aliases": ["score cv", "cv:score"],
+      "description": "Compute 0–100 CV score and dimension breakdown.",
+      "guardrails": [
+        ".github/agents/framework-enhancements/cv-scoring-system.json"
+      ]
+    },
+    {
+      "id": "classify-seniority",
+      "aliases": ["classify seniority", "cv:seniority"],
+      "description": "Heuristic Junior/Mid/Senior prediction with confidence and rationale.",
+      "guardrails": [
+        ".github/agents/framework-enhancements/seniority-classification.json"
+      ]
+    },
+    {
+      "id": "convert-languages-to-cefr",
+      "aliases": ["convert languages", "lang:cefr"],
+      "description": "Map subjective language claims to CEFR (A1–C2).",
+      "guardrails": [
+        ".github/agents/skill-cards/language-skills.json"
+      ]
+    },
+    {
+      "id": "rewrite-achievements-from-responsibilities",
+      "aliases": ["achievements:rewrite", "rewrite achievements"],
+      "description": "Turn responsibility bullets into quantified achievements using the Business Impact framework.",
+      "guardrails": [
+        ".github/agents/framework-enhancements/business-impact-framework.json",
+        ".github/agents/guardrails/content-constraints.json"
+      ]
+    },
+    {
+      "id": "summarize-previous-experience",
+      "aliases": ["summarize previous experience", "cv:compress-old-roles"],
+      "description": "Compress roles older than 10 years to one concise line per formatting standards.",
+      "guardrails": [
+        ".github/agents/guardrails/formatting-standards.json"
+      ]
+    },
+    {
+      "id": "propose-change",
+      "aliases": ["propose change", "governance:propose"],
+      "description": "Draft a change proposal (no edits). Generates a file under governance/proposals and awaits approval.",
+      "inputs": {
+        "required": ["title", "goals", "files_to_change"],
+        "optional": ["risk_level", "validation_plan", "rollback_plan"]
+      },
+      "guardrails": [
+        ".github/agents/governance/change-control.json",
+        ".github/agents/governance/templates.json"
+      ]
+    },
+    {
+      "id": "approve-change",
+      "aliases": ["approve change", "governance:approve"],
+      "description": "Approve a pending proposal by id. Required before any mutating command executes.",
+      "inputs": {"required": ["proposal_id"], "optional": ["notes"]},
+      "guardrails": [
+        ".github/agents/governance/change-control.json"
+      ]
+    },
+    {
+      "id": "reject-change",
+      "aliases": ["reject change", "governance:reject"],
+      "description": "Reject a pending proposal by id.",
+      "inputs": {"required": ["proposal_id"], "optional": ["notes"]},
+      "guardrails": [
+        ".github/agents/governance/change-control.json"
+      ]
+    }
+  ]
+}

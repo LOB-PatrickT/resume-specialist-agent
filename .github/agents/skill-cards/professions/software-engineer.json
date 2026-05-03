@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "profession": "Software Engineer",
+    "version": "1.0",
+    "type": "profession-overlay",
+    "description": "Lean, optional overlay to tailor CV extraction and phrasing for Software Engineers without bloating core frameworks.",
+    "depends_on": [
+      "../digital-skills.json",
+      "../organizational-skills.json",
+      "../../framework-enhancements/business-impact-framework.json"
+    ]
+  },
+  "core_domains": [
+    "System Design & Architecture",
+    "Backend/Frontend Development",
+    "APIs & Integrations",
+    "Reliability, Observability, and Performance",
+    "Security & Compliance Basics",
+    "CI/CD & DevOps Collaboration",
+    "Testing Strategy & Code Quality",
+    "Data Modeling & Persistence",
+    "Cloud Services & Infrastructure Awareness"
+  ],
+  "senior_indicators": [
+    "Designed/owned service architecture with clear SLAs/SLOs",
+    "Led critical migrations or refactors with measurable outcomes",
+    "Improved performance/reliability at scale (p95/p99, error budgets)",
+    "Mentored engineers; established coding/PR standards",
+    "Drove roadmap trade-offs and delivery predictability",
+    "Introduced/operationalized observability (logs, metrics, traces)"
+  ],
+  "impact_metrics": [
+    "Throughput/QPS and latency (p95/p99)",
+    "Error rate/availability (SLA/SLO)",
+    "Cost/perf efficiency (compute, DB, cache)",
+    "Deployment frequency/lead time/MTTR (DORA)",
+    "Revenue-impacting conversions/retention",
+    "Security incidents prevented/vulnerabilities remediated",
+    "Code quality (coverage, defect density, review turnaround)"
+  ],
+  "achievement_templates": [
+    "Designed and delivered [service/system] handling [QPS/users]; improved p95 latency from [X]ms to [Y]ms (↑[K]%) using [approach]",
+    "Led migration from [legacy] to [new stack]; reduced infra cost by [K]% and improved availability from [X]% to [Y]% (SLO) over [N] months",
+    "Implemented CI/CD pipeline (blue/green/canary); cut lead time from [X]d to [Y]h; increased deployment frequency from [A]/mo to [B]/wk",
+    "Added observability (metrics/traces/logs); reduced MTTR from [X]h to [Y]m; improved change failure rate to [Z]%",
+    "Refactored [module]; reduced defect density by [K]% and improved test coverage from [X]% to [Y]%"
+  ],
+  "missing_info_prompts": [
+    "What scale (QPS/users/regions) did your service handle?",
+    "What reliability targets (SLA/SLO) and outcomes were achieved?",
+    "What performance changes (before → after) and cost impact?",
+    "Which specific design decisions/trade-offs did you lead?",
+    "Any DORA metrics improvements (lead time, MTTR, deployment frequency)?"
+  ],
+  "ats_keywords": [
+    "System Design", "Microservices", "REST/GraphQL", "Event-Driven", "Cloud (AWS/Azure/GCP)",
+    "CI/CD", "Docker", "Kubernetes", "Observability", "SLO/SLA", "DORA Metrics", "Performance Optimization",
+    "Unit/Integration Testing", "TDD/BDD", "Security Best Practices"
+  ],
+  "scoring_overrides": {
+    "content_quality_weight": 36,
+    "structure_compliance_weight": 24,
+    "tone_language_weight": 20,
+    "evidence_validation_weight": 12,
+    "completeness_weight": 8,
+    "notes": "Bias content weight toward architectural impact and reliability/performance outcomes."
+  },
+  "brevity": {
+    "preferred_bullets_recent_role": 3,
+    "max_bullets_recent_role": 6,
+    "rule": "Lead with scale/metric; 1 outcome per bullet; consolidate low-impact details."
+  }
+}
+

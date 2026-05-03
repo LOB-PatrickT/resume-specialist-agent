@@ -1,0 +1,269 @@
+{
+  "metadata": {
+    "framework": "Content Constraints & Validation Rules",
+    "version": "1.0",
+    "description": "Rules governing what content is acceptable, required evidence levels, and data validation",
+    "europass_compliant": true
+  },
+  "evidence_requirements": {
+    "principle": "All claims must be verifiable; subjective assertions are rejected",
+    "validation_levels": {
+      "critical": {
+        "applies_to": ["Skills", "Achievements", "Certifications"],
+        "requirement": "Must have external verification (certificate, formal recognition, or documented project)",
+        "auto_correction": false,
+        "escalation": "Flag and request evidence"
+      },
+      "high": {
+        "applies_to": ["Job titles", "Employer names", "Dates of employment"],
+        "requirement": "Should be verifiable via employment records",
+        "auto_correction": false,
+        "escalation": "Cross-check with known employer databases if available"
+      },
+      "standard": {
+        "applies_to": ["Duty descriptions", "Project outcomes"],
+        "requirement": "Must be specific; no vague generalizations",
+        "auto_correction": false,
+        "escalation": "Request clarification"
+      }
+    }
+  },
+  "job_title_validation": {
+    "requirement": "Job titles must be standardized and verifiable",
+    "rules": [
+      {
+        "rule": "Use official job title from employment record",
+        "example_acceptable": ["Senior Software Engineer", "Business Analyst", "Project Manager"],
+        "example_unacceptable": ["Code Wizard", "Chief Problem Solver", "rockstar developer"]
+      },
+      {
+        "rule": "Avoid inflated or invented titles",
+        "flag_examples": [
+          "CEO (if you weren't actually CEO)",
+          "Founder of startup that didn't exist",
+          "Vice President (without organizational hierarchy)"
+        ]
+      },
+      {
+        "rule": "Use standard industry terminology",
+        "guidance": "Consult job posting databases for industry-standard titles in your sector"
+      }
+    ]
+  },
+  "achievement_quantification": {
+    "requirement": "All claims of achievement must include measurable data",
+    "unacceptable_claims": [
+      {
+        "claim": "Improved efficiency",
+        "issue": "Vague; no metric",
+        "correction": "Specify: 'Reduced processing time from 48 hours to 12 hours'"
+      },
+      {
+        "claim": "Led successful project",
+        "issue": "Undefined success",
+        "correction": "Specify: 'Delivered project 2 weeks early, 8% under budget'"
+      },
+      {
+        "claim": "Enhanced customer satisfaction",
+        "issue": "No data",
+        "correction": "Specify: 'Increased NPS from 42 to 68' or 'Reduced complaints by 45%'"
+      }
+    ],
+    "acceptable_metrics": [
+      "Financial: Revenue increase, cost reduction, budget management",
+      "Operational: Time savings, efficiency gains, throughput improvements",
+      "Quality: Error reduction, defect rate, customer satisfaction scores (NPS, CSAT)",
+      "Scale: Team size managed, number of projects, user base, transaction volume",
+      "Growth: Market expansion, new clients, adoption rates"
+    ]
+  },
+  "certification_validation": {
+    "requirement": "All certifications must be current, recognized, and verifiable",
+    "mandatory_data": [
+      "Full certification name",
+      "Issuing organization",
+      "Date obtained (DD/MM/YYYY)",
+      "Expiration date (if applicable)",
+      "Credential ID or tracking number (optional but recommended)"
+    ],
+    "red_flags": [
+      {
+        "flag": "Recent certificate (within 1 month) after long gap",
+        "reason": "Suggests last-minute certification rush; may indicate less relevant prior knowledge"
+      },
+      {
+        "flag": "Unknown issuing organization",
+        "reason": "Verify legitimacy; only list recognized institutions"
+      },
+      {
+        "flag": "Expired certification without renewal",
+        "reason": "May indicate outdated knowledge; remove or note renewal intent"
+      }
+    ],
+    "removal_rules": {
+      "rule_1": "Remove certifications older than 10 years unless industry-critical (e.g., law degree)",
+      "rule_2": "Remove certifications with expiration dates less than 3 months away",
+      "rule_3": "Remove certifications from non-accredited institutions unless industry-standard"
+    }
+  },
+  "skill_proficiency_claiming": {
+    "requirement": "Skill proficiency claims must be supported by experience duration and application context",
+    "proficiency_vs_experience": {
+      "basic": {
+        "minimum_experience": "1-6 months",
+        "evidence": "Training course completion or minimal project exposure"
+      },
+      "intermediate": {
+        "minimum_experience": "1-2 years",
+        "evidence": "Multiple projects or sustained professional use"
+      },
+      "advanced": {
+        "minimum_experience": "3+ years",
+        "evidence": "Complex implementations, mentoring others, or recognized expertise"
+      },
+      "expert": {
+        "minimum_experience": "5+ years",
+        "evidence": "Certifications, publications, conference speaking, or industry recognition"
+      }
+    },
+    "consistency_check": {
+      "rule": "If claiming 'Advanced Python' with 6 months experience, flag and request clarification",
+      "auto_correction": false,
+      "escalation": "Align proficiency level with experience"
+    }
+  },
+  "employment_gap_handling": {
+    "rule": "Gaps longer than 3 months should be addressed",
+    "acceptable_explanations": [
+      "Career break / sabbatical",
+      "Further study / training",
+      "Health / personal reasons (discretionary disclosure)",
+      "Relocation / visa processing",
+      "Contract ended / seasonal employment"
+    ],
+    "format": "Add brief 'Additional Information' entry if gap exceeds 3 months",
+    "example": "Career break: June 2021 - December 2021 (Personal development and relocation)"
+  },
+  "geographic_information": {
+    "requirement": "Location info follows Europass guidelines",
+    "rules": [
+      {
+        "context": "Work experience",
+        "include": "City and country (or Remote)"
+      },
+      {
+        "context": "Education",
+        "include": "City and country"
+      },
+      {
+        "context": "Personal information",
+        "include": "City and Country (do NOT include home address)"
+      }
+    ],
+    "remote_work": {
+      "notation": "List as 'Remote' in location field",
+      "note": "Remote applicants are fully eligible; Europass accommodates remote work"
+    }
+  },
+  "language_skill_claims": {
+    "requirement": "Language proficiency must map to CEFR scale; no subjective descriptions allowed",
+    "invalid_claims": [
+      "Fluent (without CEFR level)",
+      "Conversational",
+      "Some knowledge",
+      "Intermediate"
+    ],
+    "valid_claims": [
+      "English: C1",
+      "French: B2",
+      "German: A2",
+      "Spanish: B1 (with certification from Instituto Cervantes)"
+    ],
+    "evidence_requirement": "Certification or demonstrated professional use required for B2+",
+    "auto_mapping": "System will convert subjective to CEFR using tone-and-language guardrails"
+  },
+  "personal_information_boundaries": {
+    "always_include": [
+      "Full name",
+      "Email address",
+      "Phone number (optional but recommended)",
+      "Professional website or LinkedIn (if applicable)"
+    ],
+    "conditionally_include": [
+      "Nationality (if legally required or strategically relevant)",
+      "Driving licence (only if job-critical, e.g., delivery driver)"
+    ],
+    "never_include": [
+      "Home address (use city/country only)",
+      "Date of birth or age",
+      "Photo (unless explicitly requested)",
+      "Marital status",
+      "Children information",
+      "Health status",
+      "Political affiliation",
+      "Religion"
+    ],
+    "special_category_data": {
+      "note": "Never include special category data (race, ethnicity, sexual orientation, health conditions) per GDPR and ethical standards"
+    }
+  },
+  "validation_workflow": {
+    "stage_1_input": "User provides raw resume/CV data",
+    "stage_2_evidence_check": "System validates all claims against acceptable evidence levels",
+    "stage_3_consistency_audit": "System cross-checks coherence (dates, timelines, proficiency vs experience)",
+    "stage_4_compliance_review": "System verifies adherence to Europass and data protection standards",
+    "stage_5_transformation": "System converts to standardized format per guardrails",
+    "stage_6_output": "Clean, validated, Europass-compliant CV"
+  },
+  "senior_level_expectations": {
+    "applicability": "Roles with >= 7 years total experience or senior titles",
+    "requirements": [
+      "Show strategic decision-making (owned test strategies, standards, or tool adoption)",
+      "Demonstrate scope expansion (platform-level or multi-team impact)",
+      "Include mentorship/knowledge transfer (with counts/outcomes)",
+      "Quantify business impact (revenue/cost/risk/time)",
+      "Provide scale context (users, transactions, modules) in first bullet per role"
+    ],
+    "common_gaps_to_flag": [
+      "Responsibilities listed without outcomes",
+      "No metrics (before/after) for key achievements",
+      "No scale or system criticality context",
+      "Flat responsibilities across multiple roles (no progression)"
+    ]
+  },
+  "achievement_requirements": {
+    "principle": "Activities must be reframed as achievements with measurable outcomes",
+    "must_include": [
+      "Action taken (what you did)",
+      "Metric (before → after or absolute value)",
+      "Scope/scale (users, transactions, modules)",
+      "Business impact (efficiency, quality, risk, cost, revenue)"
+    ],
+    "examples": {
+      "bad": "Performed regression testing",
+      "good": "Managed regression testing strategy for enterprise HRIS (500+ clients, 200K+ users); reduced defect escape rate from 8% to 2%; prevented 34 post-release incidents"
+    }
+  },
+  "scale_context_requirement": {
+    "rule": "Each recent role must include a scale/criticality statement in the first bullet",
+    "examples": [
+      "Platform serving 500+ clients; 200K+ end users; $2.5B annual transactions",
+      "Credit card clearing system processing 50M+ annual transactions; 99.99% uptime"
+    ]
+  },
+  "brevity_controls": {
+    "max_bullets_per_recent_role": 6,
+    "preferred_bullets_per_recent_role": 3,
+    "consolidate_older_than_years": 10,
+    "rules": [
+      "One idea per bullet; 220 characters target",
+      "Remove redundant responsibilities; focus on impact",
+      "Group legacy roles into 'Previous Experience' when exceeding 2 pages"
+    ]
+  },
+  "framework_references": {
+    "business_impact_framework": ".github/agents/framework-enhancements/business-impact-framework.json",
+    "senior_level_positioning": ".github/agents/framework-enhancements/senior-level-positioning.json",
+    "actionable_items": ".github/agents/framework-enhancements/actionable-items-framework.json"
+  }
+}

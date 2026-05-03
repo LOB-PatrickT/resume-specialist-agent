@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "framework": "Europass Tone & Language Guardrails",
+    "version": "1.0",
+    "description": "Enforcement rules for professional, objective, and culturally appropriate language",
+    "europass_compliant": true,
+    "purpose": "European CVs prioritize facts over marketing; this guardrail strips Americanized buzzwords"
+  },
+  "anti_hype_guardrail": {
+    "description": "Prohibited terms and their evidence-based replacements",
+    "prohibited_terms": [
+      {
+        "term": "rockstar",
+        "severity": "critical",
+        "replacement_strategy": "Replace with specific technical expertise or role title",
+        "example_replacement": "Senior Java Developer with 10+ years enterprise experience"
+      },
+      {
+        "term": "ninja",
+        "severity": "critical",
+        "replacement_strategy": "Replace with specific expertise",
+        "example_replacement": "Expert in Azure infrastructure automation"
+      },
+      {
+        "term": "guru",
+        "severity": "critical",
+        "replacement_strategy": "Replace with credentials or measurable expertise",
+        "example_replacement": "AWS Certified Solutions Architect (Professional)"
+      },
+      {
+        "term": "passionate",
+        "severity": "high",
+        "replacement_strategy": "Replace with demonstrated action or achievement",
+        "example_replacement": "Authored 5 peer-reviewed publications on machine learning"
+      },
+      {
+        "term": "dynamic",
+        "severity": "high",
+        "replacement_strategy": "Replace with specific examples of change or improvement",
+        "example_replacement": "Drove organizational transformation by implementing Agile methodology"
+      },
+      {
+        "term": "go-getter",
+        "severity": "high",
+        "replacement_strategy": "Replace with measurable initiative",
+        "example_replacement": "Identified and implemented 3 process improvements reducing costs by 20%"
+      },
+      {
+        "term": "results-driven",
+        "severity": "high",
+        "replacement_strategy": "Lead with concrete results in role descriptions",
+        "example_replacement": "Increased sales by 35%; reduced customer churn from 12% to 7%"
+      },
+      {
+        "term": "think outside the box",
+        "severity": "medium",
+        "replacement_strategy": "Replace with specific innovation",
+        "example_replacement": "Designed novel approach to data integration reducing processing time by 60%"
+      },
+      {
+        "term": "hard worker",
+        "severity": "medium",
+        "replacement_strategy": "Replace with measurable output",
+        "example_replacement": "Managed 8 concurrent projects with 100% on-time delivery"
+      },
+      {
+        "term": "team player",
+        "severity": "medium",
+        "replacement_strategy": "Replace with specific collaboration example",
+        "example_replacement": "Coordinated cross-functional teams across 3 departments"
+      },
+      {
+        "term": "excellent communicator",
+        "severity": "medium",
+        "replacement_strategy": "Replace with communication evidence",
+        "example_replacement": "Delivered quarterly strategy presentations to 100+ stakeholders"
+      },
+      {
+        "term": "detail-oriented",
+        "severity": "low",
+        "replacement_strategy": "Replace with quality outcome",
+        "example_replacement": "Implemented QA process achieving 99.5% defect-free releases"
+      }
+    ]
+  },
+  "tone_requirements": {
+    "principles": [
+      "Objective and factual",
+      "Evidence-based",
+      "Industry-appropriate",
+      "Concise and direct",
+      "Action-oriented"
+    ],
+    "required_style": {
+      "description": "Active voice, specific accomplishments, quantified metrics",
+      "example_good": "Led team of 8 developers; delivered 12 projects on schedule; reduced deployment time by 40%",
+      "example_bad": "I am a results-driven team leader passionate about delivering excellence and driving success"
+    },
+    "forbidden_constructions": [
+      "Personal pronouns (I, me, my)",
+      "Subjective adjectives without evidence",
+      "Exclamation marks",
+      "Casual language or slang",
+      "Emotional expressions",
+      "Unsubstantiated claims",
+      "Marketing jargon"
+    ]
+  },
+  "cultural_appropriateness": {
+    "geographic_context": "European standards apply globally for this agent (Europass is internationally recognized)",
+    "considerations": [
+      {
+        "region": "EU/EEA",
+        "note": "Strictly follow Europass format; avoid personal details (age, marital status, photo unless explicitly requested)"
+      },
+      {
+        "region": "Non-EU Remote",
+        "note": "Use Europass framework but acknowledge local hiring practices; never include irrelevant personal data"
+      }
+    ],
+    "prohibited_content": [
+      "Age or date of birth (unless required by law)",
+      "Marital status",
+      "Number of children",
+      "Religion or political affiliation",
+      "Photo (unless explicitly required)",
+      "Health information",
+      "Salary history"
+    ]
+  },
+  "validation_checks": {
+    "check_1": {
+      "name": "Buzzword Detection",
+      "action": "Flag and replace all prohibited terms",
+      "auto_correction": true
+    },
+    "check_2": {
+      "name": "Subject Removal",
+      "action": "Remove all first-person pronouns; rewrite in third-person or passive voice where appropriate",
+      "auto_correction": true
+    },
+    "check_3": {
+      "name": "Evidence Requirement",
+      "action": "Flag claims without measurable backing; request quantification",
+      "auto_correction": false
+    },
+    "check_4": {
+      "name": "Personal Data Audit",
+      "action": "Flag and remove any prohibited personal information",
+      "auto_correction": true
+    },
+    "check_5": {
+      "name": "Tone Assessment",
+      "action": "Flag emotional language or subjective descriptors",
+      "auto_correction": false
+    }
+  }
+}
+

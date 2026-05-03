@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "framework": "Europass Interpersonal Skills",
+    "version": "1.0",
+    "description": "Soft skills grouped under interpersonal categories",
+    "europass_compliant": true,
+    "note": "These skills are extracted from work experience and emphasized through concrete examples, not subjective claims"
+  },
+  "categories": {
+    "communication": {
+      "description": "Ability to convey information effectively to diverse audiences",
+      "competencies": [
+        "Stakeholder engagement",
+        "Presentation delivery",
+        "Written communication",
+        "Active listening",
+        "Negotiation",
+        "Conflict resolution",
+        "Cross-functional coordination"
+      ]
+    },
+    "teamwork": {
+      "description": "Ability to work effectively with others toward shared goals",
+      "competencies": [
+        "Collaboration",
+        "Peer support",
+        "Knowledge sharing",
+        "Interdisciplinary work",
+        "Remote team coordination",
+        "Group problem-solving"
+      ]
+    },
+    "cultural_awareness": {
+      "description": "Ability to work respectfully and effectively with people from different backgrounds",
+      "competencies": [
+        "Cultural sensitivity",
+        "Multilingual communication",
+        "Global perspective",
+        "Inclusive approach",
+        "Adaptation to diverse environments",
+        "International experience"
+      ]
+    },
+    "customer_focus": {
+      "description": "Ability to understand and respond to client or user needs",
+      "competencies": [
+        "User empathy",
+        "Service orientation",
+        "Feedback incorporation",
+        "Responsiveness to requirements",
+        "Quality focus",
+        "Stakeholder satisfaction"
+      ]
+    }
+  },
+  "extraction_guidelines": {
+    "principle": "Extract from measurable work outcomes, not personality traits",
+    "prohibited_source_terms": [
+      "passionate",
+      "dynamic",
+      "enthusiastic",
+      "go-getter",
+      "rockstar",
+      "ninja"
+    ],
+    "conversion_examples": [
+      {
+        "raw_claim": "I am passionate about team collaboration",
+        "extracted_skill": "Teamwork",
+        "evidence_based_rewrite": "Coordinated efforts of cross-functional teams on 3 major projects"
+      },
+      {
+        "raw_claim": "Excellent communicator",
+        "extracted_skill": "Communication",
+        "evidence_based_rewrite": "Delivered quarterly reports to C-level executives and managed stakeholder communications for 50+ clients"
+      },
+      {
+        "raw_claim": "Cultural fit, global mindset",
+        "extracted_skill": "Cultural Awareness",
+        "evidence_based_rewrite": "Managed international teams across 5 continents; fluent in 3 languages"
+      }
+    ]
+  },
+  "data_structure": {
+    "type": "object",
+    "properties": {
+      "skill_name": {
+        "type": "string",
+        "description": "Competency identifier"
+      },
+      "category": {
+        "type": "string",
+        "enum": ["communication", "teamwork", "cultural_awareness", "customer_focus"],
+        "description": "Primary interpersonal category"
+      },
+      "evidence_statements": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "context": {"type": "string", "description": "Where/when demonstrated"},
+            "action": {"type": "string", "description": "What was done"},
+            "result": {"type": "string", "description": "Measurable outcome"}
+          }
+        },
+        "description": "CAR model (Context-Action-Result) evidence"
+      },
+      "proficiency_level": {
+        "type": "string",
+        "enum": ["Basic", "Intermediate", "Advanced"],
+        "description": "Based on evidence, not self-assessment"
+      }
+    }
+  }
+}
+

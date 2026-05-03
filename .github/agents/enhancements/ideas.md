@@ -1,0 +1,1 @@
+1. create a high level professional summary for LinkedIn
