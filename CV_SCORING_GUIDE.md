@@ -506,7 +506,7 @@ FORMATTING (10 points)
 ☐ All dates in DD/MM/YYYY or "Month YYYY" (NOT MM/DD/YYYY)
 ☐ Zero spelling or grammar errors
 ☐ Consistent bullet point format
-☐ 1-2 pages maximum
+☐ 1-3 pages maximum (2 preferred for most; allow 3 for senior/complex histories)
 ☐ No images, graphics, or special formatting
 ```
 
@@ -546,5 +546,3 @@ FORMATTING (10 points)
 ---
 
 **Version:** 2.0 | Updated: 3 May 2026 | Status: Production Ready
-
-

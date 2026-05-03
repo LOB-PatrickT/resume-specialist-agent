@@ -1,8 +1,8 @@
 {
   "metadata": {
     "framework": "Europass Formatting Standards",
-    "version": "1.0",
-    "description": "Standardized formatting, date conventions, and structure enforcement",
+    "version": "1.1",
+    "description": "Standardized formatting, date conventions, and structure enforcement (updated length guidance)",
     "europass_compliant": true
   },
   "date_formatting": {
@@ -53,9 +53,9 @@
     ]
   },
   "length_constraints": {
-    "absolute_maximum": "2 pages",
-    "preferred_length": "1 page",
-    "enforcement": "Hard limit - content beyond 2 pages will be rejected",
+    "absolute_maximum": "3 pages",
+    "preferred_length": "2 pages (up to 3 pages for senior/complex histories)",
+    "enforcement": "Hard limit - content beyond 3 pages will be rejected",
     "strategy_for_excess": {
       "step_1": "Consolidate entries older than 10 years into single 'Previous Experience' line",
       "step_2": "Reduce descriptions to essential duties only",
@@ -63,7 +63,7 @@
       "step_4": "Archive older education/certifications or list without description"
     },
     "priority_preservation": [
-      "1. Most recent 5 years of work experience",
+      "1. Most recent 7 years of work experience",
       "2. Highest relevant education level",
       "3. Critical certifications",
       "4. Language skills",
@@ -186,9 +186,9 @@
     },
     "check_3": {
       "name": "Length Compliance",
-      "rule": "Content must not exceed 2 pages",
+      "rule": "Content must not exceed 3 pages (2 pages preferred; allow 3 for senior/complex histories)",
       "auto_correction": false,
-      "escalation": "Request user to consolidate content"
+      "escalation": "Request consolidation if >3 pages; suggest keeping most-recent work detailed and grouping older roles"
     },
     "check_4": {
       "name": "File Format Validation",
@@ -207,13 +207,13 @@
     "objective": "Keep CV lean, direct, and time-efficient for reviewers",
     "max_bullets_per_recent_role": 6,
     "preferred_bullets_per_recent_role": 3,
-    "max_bullets_older_role": 2,
+    "max_bullets_older_role": 3,
     "max_line_length_chars": 220,
     "rules": [
       "Use one result per bullet, lead with the metric where possible",
       "Avoid filler and stacked adjectives; prefer numbers over adjectives",
       "Combine repetitive responsibilities; remove low-impact tasks",
-      "If content exceeds 2 pages, consolidate roles >10 years old into 'Previous Experience'"
+      "If content exceeds 3 pages, consolidate roles >10 years old into 'Previous Experience'"
     ]
   },
   "senior_role_requirements": {

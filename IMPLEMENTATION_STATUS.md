@@ -228,7 +228,7 @@ Validation & Score  → Final scan + quality report (0-100)
    - Europass format compliance
 
 7. **Output Generation**
-   - Europass-compliant CV (1-2 pages)
+   - Europass-compliant CV (1-3 pages; 2 preferred; allow 3 for senior/complex histories)
    - Quality score report
    - Transformation report (what changed & why)
    - Actionable items (what's missing)
@@ -365,5 +365,3 @@ Your Resume Specialist Agent now has:
 **Status:** ✅ Production Ready  
 **Next Phase:** Real-world validation & quality testing  
 **Branches:** Merged `feature/non-compact-cv-generation` → `master`
-
-

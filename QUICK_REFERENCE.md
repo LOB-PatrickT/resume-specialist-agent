@@ -1,6 +1,6 @@
 # 🚀 Quick Reference Card - Resume Specialist Agent
 
-**Version:** 2.0 | **Status:** Production Ready | **Updated:** 3 May 2026
+**Version:** 2.1 | **Status:** Production Ready | **Updated:** 3 May 2026
 
 ---
 
@@ -44,7 +44,7 @@ Receive:
 - Dimension Breakdown (6 scoring categories)
 - Top 3 Improvement Recommendations
 - Transformation Report (what changed & why)
-- Europass-Compliant CV (1-2 pages)
+- Europass-Compliant CV (1-3 pages)
 ```
 
 ---
@@ -299,8 +299,6 @@ Reference Examples:
 
 ---
 
-**Quick Ref Version:** 2.0  
+**Quick Ref Version:** 2.1  
 **Last Updated:** 3 May 2026  
 **Status:** ✅ Production Ready
-
-

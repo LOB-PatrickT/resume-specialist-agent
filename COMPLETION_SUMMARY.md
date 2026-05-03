@@ -70,12 +70,12 @@
 ✅ `language-skills.json` - CEFR language proficiency framework (A1-C2)  
 ✅ `digital-skills.json` - Europass digital competency taxonomy  
 ✅ `interpersonal-skills.json` - Evidence-based soft skills  
-✅ `organizational-skills.json` - Leadership & quantified outcomes  
+✅ `organizational-skills.json` - Leadership & outcomes  
 ✅ `sector-specific-skills.json` - 6 industry expertise areas  
 
 #### Guardrails Enforcement (3 files - Quality Control)
-✅ `tone-and-language.json` - 10+ buzzword removal + GDPR compliance  
-✅ `formatting-standards.json` - Date formats, structure, length rules  
+✅ `tone-and-language.json` - 10+ buzzword removal + GDPR  
+✅ `formatting-standards.json` - Date formats, structure, length  
 ✅ `content-constraints.json` - Evidence validation & personal data rules  
 
 #### Context Gates (3 files - Compliance Boundaries)
@@ -157,7 +157,7 @@ Your Resume Specialist Agent now automatically:
 - ✅ ATS optimization checks
 
 ### 7. **Output Generation**
-- ✅ Europass-compliant CV (1-2 pages)
+- ✅ Europass-compliant CV (1-3 pages)
 - ✅ Quality score report with breakdown
 - ✅ Transformation report (what changed & why)
 - ✅ Actionable items (what's missing)
@@ -348,5 +348,3 @@ Your Resume Specialist Agent is:
 **Version:** 2.0 - Phase 2 Complete  
 **Status:** ✅ PRODUCTION READY  
 **All Changes:** Committed to master branch  
-
-

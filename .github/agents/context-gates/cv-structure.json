@@ -283,8 +283,8 @@
   },
   "length_enforcement": {
     "soft_limit": "1 page",
-    "hard_limit": "2 pages maximum",
-    "exceedance_handling": "Auto-reject with consolidation suggestions"
+    "hard_limit": "3 pages maximum",
+    "exceedance_handling": "Auto-reject with consolidation suggestions if >3 pages"
   },
   "senior_role_structure": {
     "applicability": "Senior titles or >=7 years total experience",

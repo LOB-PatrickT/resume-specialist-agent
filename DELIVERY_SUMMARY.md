@@ -66,7 +66,7 @@ resume-specialist/
 | Guardrail | Rules Enforced | Auto-Correction |
 |-----------|---|---|
 | **Tone & Language** | 10+ buzzwords + tone standards + GDPR | ✅ Yes |
-| **Formatting Standards** | Date format + reverse chronology + 1-2 page limit | ✅ Yes |
+| **Formatting Standards** | Date format + reverse chronology + 1-3 page limit | ✅ Yes |
 | **Content Constraints** | Evidence levels + no prohibited data + proficiency validation | ⚠️ Escalation |
 
 ### Context Gates (Compliance Boundaries)
@@ -173,7 +173,7 @@ Each output CV is validated against:
 | Subject Removal | Content | ✅ Yes | Converts to 3rd person |
 | Date Format | Format | ✅ Yes | Converts to DD/MM/YYYY |
 | Reverse Chronology | Structure | ✅ Yes | Auto-reorders |
-| Page Length | Length | ⚠️ No | Rejects if >2 pages |
+| Page Length | Length | ⚠️ No | Rejects if >3 pages |
 | Personal Data Audit | GDPR | ✅ Yes | Auto-removes |
 | Tone Assessment | Content | ⚠️ No | Flags emotional language |
 | Evidence Requirement | Content | ⚠️ No | Flags unsupported claims |
@@ -223,7 +223,7 @@ Your agent is now ready to:
 
 ### 5. **Output Generation**
    - Generate Europass-compliant CV
-   - 1-2 page format
+   - 1-3 page format (2 pages preferred; allow 3 for senior/complex histories)
    - PDF-ready or editable format
    - Include transformation report
 
@@ -240,7 +240,7 @@ This agent strictly adheres to:
 ✅ **Evidence-Based Assessment** - No subjectivity  
 ✅ **Professional Tone** - European standards (no marketing jargon)  
 ✅ **GDPR Compliance** - Data minimization enforced  
-✅ **Length Constraints** - 1-2 pages maximum  
+✅ **Length Constraints** - 1-3 pages maximum (2 preferred)
 
 ---
 
@@ -253,14 +253,6 @@ This agent strictly adheres to:
 3. **Accept raw CV data** from applicants
 4. **Run through 7-stage pipeline** (validation → categorization → transformation → compliance → output)
 5. **Generate Europass-compliant CV** with quality report
-
-### To Extend This Agent:
-
-1. Add new sector to `sector-specific-skills.json`
-2. Add new language to `language-skills.json`
-3. Add new guardrail rule to appropriate guardrails file
-4. Update version in resume-generator.agent.md
-5. Commit to version control
 
 ---
 
@@ -307,7 +299,7 @@ Your Resume Specialist Agent is now equipped to:
 5. ✅ **Ensure GDPR compliance** with strict data rules
 6. ✅ **Support global applicants** (remote, non-EU, etc.)
 7. ✅ **Prevent hallucination** through enforcement guardrails
-8. ✅ **Generate standardized output** (1-2 pages, PDF-ready)
+8. ✅ **Generate standardized output** (1-3 pages, PDF-ready)
 
 ---
 
@@ -348,4 +340,3 @@ Your custom Resume Specialist Agent is now **fully operational** and ready to tr
 **Status:** ✅ Production Ready  
 **Framework:** Europass International Standard  
 **MCP Ready:** Yes  
-

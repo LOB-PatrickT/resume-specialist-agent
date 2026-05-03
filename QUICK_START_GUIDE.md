@@ -3,7 +3,7 @@
 **Last Updated:** 3 May 2026  
 **Target User:** HR Managers, Recruiters, Talent Screeners  
 **Time to Generate CV:** 15-20 minutes  
-**Output Format:** Europass-compliant, 1-2 pages, PDF-ready
+**Output Format:** Europass-compliant, 1-3 pages, PDF-ready
 
 ---
 
@@ -49,7 +49,7 @@ Agent automatically:
 
 ### Step 4: Review & Approve (5 min)
 Agent generates:
-- ✅ Cleaned CV (1-2 pages)
+- ✅ Cleaned CV (1-3 pages)
 - ✅ Transformation report (what changed and why)
 - ✅ Quality score (see scoring section below)
 - ⚠️ Escalation flags (if any)
@@ -150,7 +150,7 @@ Does it contain Americanisms/buzzwords?
         ├─ YES → Auto-convert (show changes)
         └─ NO ↓
         
-Does it exceed 2 pages when formatted?
+Does it exceed 3 pages when formatted?
         ├─ YES → Return with consolidation suggestions
         └─ NO ↓
         
@@ -235,7 +235,7 @@ Before sending to employers, verify:
 □ All achievements include metrics/numbers
 □ No first-person pronouns (I, me, my)
 □ No personal data except name, email, location, phone
-□ CV is 1-2 pages maximum
+□ CV is 1-3 pages maximum (2 pages preferred)
 □ CEFR format for all languages (A1-C2)
 □ All work experience in reverse chronological order
 □ All certifications have issue and expiration dates
@@ -278,7 +278,7 @@ A **good output** from this agent achieves:
 ✅ **Objective Tone** - Zero buzz words, pure facts  
 ✅ **GDPR Safe** - No unnecessary personal data  
 ✅ **Globally Ready** - Works for EU and remote applicants  
-✅ **Concise** - 1-2 pages, prioritized by relevance  
+✅ **Concise** - 1-3 pages, prioritized by relevance  
 ✅ **No Hallucination** - Every word from candidate's input  
 
 ---
@@ -287,7 +287,7 @@ A **good output** from this agent achieves:
 
 | Problem | Solution |
 |---------|----------|
-| **"CV exceeds 2 pages"** | Consolidate roles >10 years old; reduce non-essential details |
+| **"CV exceeds 3 pages"** | Consolidate roles >10 years old; reduce non-essential details |
 | **"Missing metrics"** | Request candidate to provide numbers: revenue, time saved, defect counts, etc. |
 | **"Buzzwords detected"** | System auto-removes; candidate approves replacements |
 | **"No career progression shown"** | Restructure to highlight increasing responsibility; use org skills framework |
@@ -296,68 +296,7 @@ A **good output** from this agent achieves:
 
 ---
 
-## 📞 Support
-
-For questions about:
-- **Skill categorization** → See skill-cards/ folder
-- **Prohibited content** → See guardrails/ folder
-- **Compliance rules** → See context-gates/ folder
-- **Overall framework** → See resume-generator.agent.md (source of truth)
-
----
-
-## 🚨 Critical Do's & Don'ts
-
-### ✅ DO
-- Provide specific, quantified achievements
-- Include business impact, not just technical details
-- Use action verbs (Led, Delivered, Increased, Reduced, etc.)
-- Frame experience in terms of outcomes
-- Show career progression and growing responsibility
-- Include certifications with dates
-- Specify company names, job titles, locations
-
-### ❌ DON'T
-- Use first-person pronouns (I, me, my)
-- Include marketing language ("passionate," "rockstar," "dynamic")
-- Circle back to vague responsibilities
-- Omit metrics (everything needs numbers)
-- Include age, photo, or personal health info
-- Use US date format (MM/DD/YYYY)
-- Mix chronological order
-- Exceed 2 pages
-
----
-
-## 📈 Next Steps After CV Submission
-
-1. **Track Success** - Note if candidate advances after CV submission
-2. **Gather Feedback** - Did hiring team comment on formatting?
-3. **Iterate** - Use feedback to improve future CVs
-4. **Score Trending** - Monitor if average scores are improving
-
----
-
-## Actionable Items (New)
-
-When raw input lacks key details, the agent returns a concise Actionable Items report before generating the final CV:
-
-- What you need: the exact missing data (metrics, scope, outcomes)
-- Why it matters: seniority signal, business impact, compliance
-- Exact prompt to answer: copy/paste guidance
-- Example of a good answer: format + sample numbers
-
-Example outputs use: .github/agents/framework-enhancements/actionable-items-framework.json
-
-### Keep It Lean (Anti-Bloat)
-- Max 3–4 high-impact bullets per recent role (6 hard cap)
-- One result per bullet, lead with metric
-- Remove filler (very, highly, extremely); prefer numbers
-- Consolidate roles >10 years old into one line if needed
-
----
-
-## Quick Scoring Run
+## 📋 Quick Scoring Run
 
 - The agent computes a 0–100 score using: .github/agents/framework-enhancements/cv-scoring-system.json
 - Thresholds: 90+ Excellent, 80–89 Strong, 70–79 Acceptable, 60–69 Needs Work, <60 Weak
@@ -386,4 +325,3 @@ Notes:
 **Version:** 1.0  
 **Status:** Production Ready  
 **Last Updated:** 3 May 2026
-
