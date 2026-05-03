@@ -312,5 +312,50 @@
     "business_impact_framework": ".github/agents/framework-enhancements/business-impact-framework.json",
     "senior_level_positioning": ".github/agents/framework-enhancements/senior-level-positioning.json",
     "actionable_items_framework": ".github/agents/framework-enhancements/actionable-items-framework.json"
+  },
+  "role_entry_template": {
+    "scope_line": {
+      "required": true,
+      "label": "Scope",
+      "format": "[platform/system]; [users/clients]; [transactions/criticality]",
+      "example": "Enterprise HRIS/Payroll serving 500+ clients; 200K+ users; ~$2.5B annual payroll"
+    },
+    "achievements_block": {
+      "label_policy": {
+        "default_label": "Strategic Achievements",
+        "allow_variations": true,
+        "examples": [
+          "Key Contributions",
+          "Impact Highlights",
+          "Delivery Highlights"
+        ]
+      },
+      "bullets": {
+        "min": 3,
+        "max": 5,
+        "rules": [
+          "Start with an action verb",
+          "Prefer metric‑first phrasing where available",
+          "One result per bullet (~220 chars)",
+          "Evidence‑based; avoid subjective adjectives"
+        ]
+      },
+      "optional_subtopics": {
+        "enabled": true,
+        "when_to_use": [
+          "Use only when a theme deserves emphasis (e.g., Automation, Compliance, Performance)",
+          "Skip if it adds no edge or repeats information"
+        ],
+        "format": {
+          "case": "sentence",
+          "max_length_chars": 60,
+          "punctuation": "no emojis; keep plain text",
+          "example": "Automation Architecture & Scalability"
+        }
+      }
+    }
+  },
+  "presets": {
+    "achievement_blocks": ".github/agents/framework-enhancements/achievement-blocks-preset.json"
   }
 }
