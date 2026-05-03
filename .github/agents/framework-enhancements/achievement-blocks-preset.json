@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "name": "Achievement Blocks Preset",
+    "version": "1.0",
+    "description": "Reusable sub-topic labels to optionally group achievements under a role. Use only when it adds clarity or edge."
+  },
+  "presets": {
+    "qa_engineer": [
+      "Automation Architecture & Scalability",
+      "Quality Metrics Transformation",
+      "Compliance & Risk Mitigation",
+      "Performance & Reliability",
+      "Cross-Functional QA Leadership",
+      "Data Accuracy Validation"
+    ],
+    "software_engineer": [
+      "Modernization & Security",
+      "API Governance & Contracts",
+      "Release Orchestration (CI/CD)",
+      "Performance & Reliability",
+      "Observability & Incident Reduction",
+      "Cost & Efficiency Improvements"
+    ],
+    "generic": [
+      "Key Contributions",
+      "Impact Highlights",
+      "Delivery Highlights"
+    ]
+  }
+}
+
